@@ -1,0 +1,546 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-02T15:47:47.442911+00:00",
+  "title": "Design System: Moonring Guide",
+  "extensions": {
+    "colorMeta": {
+      "ground": {
+        "role": "neutral",
+        "displayName": "Aubergine Ground",
+        "tonalRamp": [
+          "oklch(15.00% 0.02365 287.96)",
+          "oklch(26.43% 0.02365 287.96)",
+          "oklch(37.86% 0.02365 287.96)",
+          "oklch(49.29% 0.02365 287.96)",
+          "oklch(60.71% 0.02365 287.96)",
+          "oklch(72.14% 0.02365 287.96)",
+          "oklch(83.57% 0.02365 287.96)",
+          "oklch(95.00% 0.02365 287.96)"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Inset Aubergine",
+        "tonalRamp": [
+          "oklch(15.00% 0.03024 289.70)",
+          "oklch(26.43% 0.03024 289.70)",
+          "oklch(37.86% 0.03024 289.70)",
+          "oklch(49.29% 0.03024 289.70)",
+          "oklch(60.71% 0.03024 289.70)",
+          "oklch(72.14% 0.03024 289.70)",
+          "oklch(83.57% 0.03024 289.70)",
+          "oklch(95.00% 0.03024 289.70)"
+        ]
+      },
+      "rail": {
+        "role": "neutral",
+        "displayName": "Indigo Register",
+        "tonalRamp": [
+          "oklch(15.00% 0.04582 288.46)",
+          "oklch(26.43% 0.04582 288.46)",
+          "oklch(37.86% 0.04582 288.46)",
+          "oklch(49.29% 0.04582 288.46)",
+          "oklch(60.71% 0.04582 288.46)",
+          "oklch(72.14% 0.04582 288.46)",
+          "oklch(83.57% 0.04582 288.46)",
+          "oklch(95.00% 0.04582 288.46)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Restrained Rule",
+        "tonalRamp": [
+          "oklch(15.00% 0.04522 292.74)",
+          "oklch(26.43% 0.04522 292.74)",
+          "oklch(37.86% 0.04522 292.74)",
+          "oklch(49.29% 0.04522 292.74)",
+          "oklch(60.71% 0.04522 292.74)",
+          "oklch(72.14% 0.04522 292.74)",
+          "oklch(83.57% 0.04522 292.74)",
+          "oklch(95.00% 0.04522 292.74)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.03567 296.56)",
+          "oklch(26.43% 0.03567 296.56)",
+          "oklch(37.86% 0.03567 296.56)",
+          "oklch(49.29% 0.03567 296.56)",
+          "oklch(60.71% 0.03567 296.56)",
+          "oklch(72.14% 0.03567 296.56)",
+          "oklch(83.57% 0.03567 296.56)",
+          "oklch(95.00% 0.03567 296.56)"
+        ]
+      },
+      "accent": {
+        "role": "secondary",
+        "displayName": "Wolf Peach",
+        "tonalRamp": [
+          "oklch(15.00% 0.07567 46.00)",
+          "oklch(26.43% 0.07567 46.00)",
+          "oklch(37.86% 0.07567 46.00)",
+          "oklch(49.29% 0.07567 46.00)",
+          "oklch(60.71% 0.07567 46.00)",
+          "oklch(72.14% 0.07567 46.00)",
+          "oklch(83.57% 0.07567 46.00)",
+          "oklch(95.00% 0.07567 46.00)"
+        ]
+      },
+      "lavender": {
+        "role": "primary",
+        "displayName": "Mist Lavender",
+        "tonalRamp": [
+          "oklch(15.00% 0.09633 289.34)",
+          "oklch(26.43% 0.09633 289.34)",
+          "oklch(37.86% 0.09633 289.34)",
+          "oklch(49.29% 0.09633 289.34)",
+          "oklch(60.71% 0.09633 289.34)",
+          "oklch(72.14% 0.09633 289.34)",
+          "oklch(83.57% 0.09633 289.34)",
+          "oklch(95.00% 0.09633 289.34)"
+        ]
+      },
+      "mint": {
+        "role": "secondary",
+        "displayName": "Lady Mint",
+        "tonalRamp": [
+          "oklch(15.00% 0.05402 172.09)",
+          "oklch(26.43% 0.05402 172.09)",
+          "oklch(37.86% 0.05402 172.09)",
+          "oklch(49.29% 0.05402 172.09)",
+          "oklch(60.71% 0.05402 172.09)",
+          "oklch(72.14% 0.05402 172.09)",
+          "oklch(83.57% 0.05402 172.09)",
+          "oklch(95.00% 0.05402 172.09)"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Reading Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.01501 298.56)",
+          "oklch(26.43% 0.01501 298.56)",
+          "oklch(37.86% 0.01501 298.56)",
+          "oklch(49.29% 0.01501 298.56)",
+          "oklch(60.71% 0.01501 298.56)",
+          "oklch(72.14% 0.01501 298.56)",
+          "oklch(83.57% 0.01501 298.56)",
+          "oklch(95.00% 0.01501 298.56)"
+        ]
+      },
+      "button-ink": {
+        "role": "neutral",
+        "displayName": "Button Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.04909 292.92)",
+          "oklch(26.43% 0.04909 292.92)",
+          "oklch(37.86% 0.04909 292.92)",
+          "oklch(49.29% 0.04909 292.92)",
+          "oklch(60.71% 0.04909 292.92)",
+          "oklch(72.14% 0.04909 292.92)",
+          "oklch(83.57% 0.04909 292.92)",
+          "oklch(95.00% 0.04909 292.92)"
+        ]
+      },
+      "button-hover": {
+        "role": "neutral",
+        "displayName": "Button Hover",
+        "tonalRamp": [
+          "oklch(15.00% 0.07615 291.37)",
+          "oklch(26.43% 0.07615 291.37)",
+          "oklch(37.86% 0.07615 291.37)",
+          "oklch(49.29% 0.07615 291.37)",
+          "oklch(60.71% 0.07615 291.37)",
+          "oklch(72.14% 0.07615 291.37)",
+          "oklch(83.57% 0.07615 291.37)",
+          "oklch(95.00% 0.07615 291.37)"
+        ]
+      },
+      "stage-selected": {
+        "role": "neutral",
+        "displayName": "Stage Selected",
+        "tonalRamp": [
+          "oklch(15.00% 0.07064 293.91)",
+          "oklch(26.43% 0.07064 293.91)",
+          "oklch(37.86% 0.07064 293.91)",
+          "oklch(49.29% 0.07064 293.91)",
+          "oklch(60.71% 0.07064 293.91)",
+          "oklch(72.14% 0.07064 293.91)",
+          "oklch(83.57% 0.07064 293.91)",
+          "oklch(95.00% 0.07064 293.91)"
+        ]
+      },
+      "stage-hover": {
+        "role": "neutral",
+        "displayName": "Stage Hover",
+        "tonalRamp": [
+          "oklch(15.00% 0.04062 291.94)",
+          "oklch(26.43% 0.04062 291.94)",
+          "oklch(37.86% 0.04062 291.94)",
+          "oklch(49.29% 0.04062 291.94)",
+          "oklch(60.71% 0.04062 291.94)",
+          "oklch(72.14% 0.04062 291.94)",
+          "oklch(83.57% 0.04062 291.94)",
+          "oklch(95.00% 0.04062 291.94)"
+        ]
+      },
+      "stage-text": {
+        "role": "neutral",
+        "displayName": "Stage Text",
+        "tonalRamp": [
+          "oklch(15.00% 0.02842 301.69)",
+          "oklch(26.43% 0.02842 301.69)",
+          "oklch(37.86% 0.02842 301.69)",
+          "oklch(49.29% 0.02842 301.69)",
+          "oklch(60.71% 0.02842 301.69)",
+          "oklch(72.14% 0.02842 301.69)",
+          "oklch(83.57% 0.02842 301.69)",
+          "oklch(95.00% 0.02842 301.69)"
+        ]
+      },
+      "checkbox-line": {
+        "role": "neutral",
+        "displayName": "Checkbox Line",
+        "tonalRamp": [
+          "oklch(15.00% 0.04010 306.85)",
+          "oklch(26.43% 0.04010 306.85)",
+          "oklch(37.86% 0.04010 306.85)",
+          "oklch(49.29% 0.04010 306.85)",
+          "oklch(60.71% 0.04010 306.85)",
+          "oklch(72.14% 0.04010 306.85)",
+          "oklch(83.57% 0.04010 306.85)",
+          "oklch(95.00% 0.04010 306.85)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 89.88)",
+          "oklch(26.43% 0.00000 89.88)",
+          "oklch(37.86% 0.00000 89.88)",
+          "oklch(49.29% 0.00000 89.88)",
+          "oklch(60.71% 0.00000 89.88)",
+          "oklch(72.14% 0.00000 89.88)",
+          "oklch(83.57% 0.00000 89.88)",
+          "oklch(95.00% 0.00000 89.88)"
+        ]
+      },
+      "wolf-tag-text": {
+        "role": "tertiary",
+        "displayName": "Wolf Tag Text",
+        "tonalRamp": [
+          "oklch(15.00% 0.08059 44.93)",
+          "oklch(26.43% 0.08059 44.93)",
+          "oklch(37.86% 0.08059 44.93)",
+          "oklch(49.29% 0.08059 44.93)",
+          "oklch(60.71% 0.08059 44.93)",
+          "oklch(72.14% 0.08059 44.93)",
+          "oklch(83.57% 0.08059 44.93)",
+          "oklch(95.00% 0.08059 44.93)"
+        ]
+      },
+      "wolf-tag-ground": {
+        "role": "tertiary",
+        "displayName": "Wolf Tag Ground",
+        "tonalRamp": [
+          "oklch(15.00% 0.02785 348.84)",
+          "oklch(26.43% 0.02785 348.84)",
+          "oklch(37.86% 0.02785 348.84)",
+          "oklch(49.29% 0.02785 348.84)",
+          "oklch(60.71% 0.02785 348.84)",
+          "oklch(72.14% 0.02785 348.84)",
+          "oklch(83.57% 0.02785 348.84)",
+          "oklch(95.00% 0.02785 348.84)"
+        ]
+      },
+      "lady-tag-text": {
+        "role": "tertiary",
+        "displayName": "Lady Tag Text",
+        "tonalRamp": [
+          "oklch(15.00% 0.05204 173.16)",
+          "oklch(26.43% 0.05204 173.16)",
+          "oklch(37.86% 0.05204 173.16)",
+          "oklch(49.29% 0.05204 173.16)",
+          "oklch(60.71% 0.05204 173.16)",
+          "oklch(72.14% 0.05204 173.16)",
+          "oklch(83.57% 0.05204 173.16)",
+          "oklch(95.00% 0.05204 173.16)"
+        ]
+      },
+      "lady-tag-ground": {
+        "role": "tertiary",
+        "displayName": "Lady Tag Ground",
+        "tonalRamp": [
+          "oklch(15.00% 0.03039 185.99)",
+          "oklch(26.43% 0.03039 185.99)",
+          "oklch(37.86% 0.03039 185.99)",
+          "oklch(49.29% 0.03039 185.99)",
+          "oklch(60.71% 0.03039 185.99)",
+          "oklch(72.14% 0.03039 185.99)",
+          "oklch(83.57% 0.03039 185.99)",
+          "oklch(95.00% 0.03039 185.99)"
+        ]
+      },
+      "angels-tag-text": {
+        "role": "tertiary",
+        "displayName": "Angels Tag Text",
+        "tonalRamp": [
+          "oklch(15.00% 0.06406 298.01)",
+          "oklch(26.43% 0.06406 298.01)",
+          "oklch(37.86% 0.06406 298.01)",
+          "oklch(49.29% 0.06406 298.01)",
+          "oklch(60.71% 0.06406 298.01)",
+          "oklch(72.14% 0.06406 298.01)",
+          "oklch(83.57% 0.06406 298.01)",
+          "oklch(95.00% 0.06406 298.01)"
+        ]
+      },
+      "angels-tag-ground": {
+        "role": "tertiary",
+        "displayName": "Angels Tag Ground",
+        "tonalRamp": [
+          "oklch(15.00% 0.05154 299.45)",
+          "oklch(26.43% 0.05154 299.45)",
+          "oklch(37.86% 0.05154 299.45)",
+          "oklch(49.29% 0.05154 299.45)",
+          "oklch(60.71% 0.05154 299.45)",
+          "oklch(72.14% 0.05154 299.45)",
+          "oklch(83.57% 0.05154 299.45)",
+          "oklch(95.00% 0.05154 299.45)"
+        ]
+      },
+      "dust-tag-text": {
+        "role": "tertiary",
+        "displayName": "Dust Tag Text",
+        "tonalRamp": [
+          "oklch(15.00% 0.01370 281.54)",
+          "oklch(26.43% 0.01370 281.54)",
+          "oklch(37.86% 0.01370 281.54)",
+          "oklch(49.29% 0.01370 281.54)",
+          "oklch(60.71% 0.01370 281.54)",
+          "oklch(72.14% 0.01370 281.54)",
+          "oklch(83.57% 0.01370 281.54)",
+          "oklch(95.00% 0.01370 281.54)"
+        ]
+      },
+      "dust-tag-ground": {
+        "role": "tertiary",
+        "displayName": "Dust Tag Ground",
+        "tonalRamp": [
+          "oklch(15.00% 0.02277 288.62)",
+          "oklch(26.43% 0.02277 288.62)",
+          "oklch(37.86% 0.02277 288.62)",
+          "oklch(49.29% 0.02277 288.62)",
+          "oklch(60.71% 0.02277 288.62)",
+          "oklch(72.14% 0.02277 288.62)",
+          "oklch(83.57% 0.02277 288.62)",
+          "oklch(95.00% 0.02277 288.62)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Main title."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Local subsections."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Explanatory paragraphs."
+      },
+      "reading-row": {
+        "displayName": "Reading Row",
+        "purpose": "Checklist instructions."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Stage register rows."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Secondary pagination and tools."
+      },
+      "button-primary": {
+        "displayName": "Button Primary",
+        "purpose": "Primary pagination."
+      },
+      "text-action": {
+        "displayName": "Text Action",
+        "purpose": "Cross-reference and resume actions."
+      },
+      "tag": {
+        "displayName": "Tag",
+        "purpose": "God affiliation labels."
+      },
+      "notes": {
+        "displayName": "Notes",
+        "purpose": "Personal notes input."
+      },
+      "chapter-number": {
+        "displayName": "Chapter Number",
+        "purpose": "Prominent route stage numerals."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "marker-color",
+        "value": "color .18s ease-out",
+        "purpose": "Localized route marker color transition; disabled for reduced motion."
+      },
+      {
+        "name": "place-marker",
+        "value": "place-marker .22s ease-out; from background #6a598a to #524873",
+        "purpose": "Selected route row animation; disabled for reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide",
+        "value": "1600px"
+      },
+      {
+        "name": "compact-desktop",
+        "value": "1120px"
+      },
+      {
+        "name": "mobile-register",
+        "value": "820px"
+      },
+      {
+        "name": "narrow",
+        "value": "540px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Pagination",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Advance to the next stage.",
+      "html": "<button class=\"ds-primary\">Nächste Etappe <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></button>",
+      "css": ".ds-primary{font-family:system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;font-size:.8rem;padding:11px 16px;border-radius:5px;min-height:42px;display:inline-flex;gap:9px;align-items:center;cursor:pointer;background:var(--lavender, #b4acf0);color:#201a34;border:1px solid var(--lavender, #b4acf0);font-weight:600}.ds-primary:hover{background:#d0c8ff}.ds-primary:focus-visible{outline:2px solid var(--lavender, #b4acf0);outline-offset:4px;}.ds-primary:disabled{opacity:.45;cursor:default}"
+    },
+    {
+      "name": "Outline Tool",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary pagination and save tools.",
+      "html": "<button class=\"ds-outline\">Fortschritt sichern</button>",
+      "css": ".ds-outline{font-family:system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;font-size:.8rem;padding:11px 16px;border-radius:5px;min-height:42px;display:inline-flex;gap:9px;align-items:center;cursor:pointer;background:transparent;color:var(--text, #edeaf5);border:1px solid var(--line, #49445f)}.ds-outline:hover{background:#332c45}.ds-outline:focus-visible{outline:2px solid var(--lavender, #b4acf0);outline-offset:4px;}.ds-outline:disabled{opacity:.45;cursor:default}.ds-outline.ds-danger{color:#f7b3a5;border-color:#a5696a}"
+    },
+    {
+      "name": "Text Action",
+      "kind": "button",
+      "refersTo": "button-text",
+      "description": "A quiet cross-reference or resume action.",
+      "html": "<button class=\"ds-text\">Passende Einkaufsliste</button>",
+      "css": ".ds-text{font-family:system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;display:inline-flex;gap:8px;align-items:center;font-size:.79rem;line-height:1.5;background:none;border:0;color:var(--lavender, #b4acf0);padding:5px 0;text-align:left;cursor:pointer}.ds-text:hover{color:#ded8ff;text-decoration:underline;text-underline-offset:4px}.ds-text:focus-visible{outline:2px solid var(--lavender, #b4acf0);outline-offset:4px;}"
+    },
+    {
+      "name": "Build Picker",
+      "kind": "card",
+      "refersTo": "build-picker",
+      "description": "Adjacent named choices with a tonal selected state.",
+      "html": "<div class=\"ds-build-picker\" role=\"group\" aria-label=\"Build wählen\"><button class=\"ds-build-active\" aria-pressed=\"true\"><strong>Wolf</strong><small>Dein gewählter Weg</small></button><button aria-pressed=\"false\"><strong>Lady</strong><small>Ein anderer Weg</small></button></div>",
+      "css": ".ds-build-picker{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line, #49445f);border-radius:10px;overflow:hidden;color:var(--text, #edeaf5)}.ds-build-picker button{font-family:system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;border:0;padding:21px 20px;min-height:93px;background:transparent;text-align:left;color:var(--text, #edeaf5);cursor:pointer}.ds-build-picker button+button{border-left:1px solid var(--line, #49445f)}.ds-build-picker button:hover{background:#282536}.ds-build-picker button.ds-build-active{background:#302c43}.ds-build-picker strong{display:block;font-family:Chivo, system-ui, sans-serif;font-size:1.16rem;font-weight:600}.ds-build-picker small{display:block;font-size:.74rem;color:var(--muted, #bab4cd);line-height:1.4;margin-top:4px}.ds-build-picker button:focus-visible{outline:2px solid var(--lavender, #b4acf0);outline-offset:4px;}"
+    },
+    {
+      "name": "Notes Field",
+      "kind": "input",
+      "refersTo": "notes-field",
+      "description": "Personal notes on a quiet inset ground.",
+      "html": "<label class=\"ds-notes-label\" for=\"ds-notes\">Meine Notizen</label><textarea class=\"ds-notes\" id=\"ds-notes\" placeholder=\"Fehlende Punkte oder entdeckte Händler …\"></textarea>",
+      "css": ".ds-notes-label{font-family:system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;color:var(--text, #edeaf5);font-size:.83rem}.ds-notes{font-family:system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;display:block;width:100%;min-height:150px;background:var(--panel, #201e2e);border:1px solid var(--line, #49445f);border-radius:5px;padding:15px;color:var(--text, #edeaf5);line-height:1.7;resize:vertical;font-size:.88rem;caret-color:var(--lavender, #b4acf0)}.ds-notes::placeholder{color:#b4acc4}.ds-notes:focus-visible{outline:2px solid var(--lavender, #b4acf0);outline-offset:4px;}"
+    },
+    {
+      "name": "Stage Register",
+      "kind": "nav",
+      "refersTo": "stage-navigation",
+      "description": "Numbered stage navigation with a selected tonal row.",
+      "html": "<nav class=\"ds-stages\" aria-label=\"Reiseetappen\"><button class=\"ds-selected\" aria-current=\"step\"><span class=\"ds-stage-marker\">01</span> Yarrow <span class=\"ds-next-dot\" aria-label=\"Nächste offene Etappe\"></span></button><button><span class=\"ds-stage-marker\">02</span> Hauptstadt</button></nav>",
+      "css": ".ds-stages{background:var(--rail, #26233c);padding:4px}.ds-stages button{font-family:system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;display:flex;align-items:center;width:100%;min-height:36px;text-align:left;gap:10px;padding:7px 9px;font-size:.78rem;background:transparent;border:0;border-radius:4px;color:#d1cade;line-height:1.3;cursor:pointer}.ds-stages button:hover{background:#343047;color:#fff}.ds-stages button.ds-selected{background:#524873;color:#fff;animation:ds-place-marker .22s ease-out}.ds-stage-marker{flex:0 0 23px;text-align:center;font-size:.66rem;font-variant-numeric:tabular-nums;color:#b4abc9;transition:color .18s ease-out}.ds-selected .ds-stage-marker{color:#e0d6ff}.ds-next-dot{width:5px;height:5px;background:var(--accent, #dfa78d);border-radius:50%;margin-left:auto}.ds-stages button:focus-visible{outline:2px solid var(--lavender, #b4acf0);outline-offset:4px;}@keyframes ds-place-marker{from{background:#6a598a}to{background:#524873}}@media(prefers-reduced-motion:reduce){.ds-stages button{animation:none}.ds-stage-marker{transition:none}}"
+    },
+    {
+      "name": "View Tabs",
+      "kind": "nav",
+      "refersTo": "view-navigation",
+      "description": "A flat underline distinguishes the current reference view.",
+      "html": "<nav class=\"ds-tabs\" aria-label=\"Guide-Ansicht\"><button class=\"ds-tab-active\" aria-current=\"page\">Reiseplan</button><button>Ausrüstung</button></nav>",
+      "css": ".ds-tabs{display:flex;gap:22px;overflow-x:auto;white-space:nowrap;border-bottom:1px solid var(--line, #49445f)}.ds-tabs button{font-family:system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;font-size:.83rem;padding:13px 0 15px;background:transparent;border:0;color:var(--muted, #bab4cd);position:relative;cursor:pointer}.ds-tabs button:hover{color:var(--text, #edeaf5)}.ds-tabs button.ds-tab-active{color:var(--lavender, #b4acf0)}.ds-tab-active:after{content:\"\";position:absolute;height:2px;background:var(--lavender, #b4acf0);inset:auto 0 0}.ds-tabs button:focus-visible{outline:2px solid var(--lavender, #b4acf0);outline-offset:-2px}"
+    },
+    {
+      "name": "God Tag",
+      "kind": "chip",
+      "refersTo": "tag-wolf",
+      "description": "Small named affiliations with a paired tonal ground.",
+      "html": "<span class=\"ds-god ds-god-wolf\">Wolf</span> <span class=\"ds-god ds-god-lady\">Lady</span> <span class=\"ds-god ds-god-angels\">Angels</span> <span class=\"ds-god ds-god-dust\">Dust</span>",
+      "css": ".ds-god{font-family:system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;display:inline-block;font-size:.64rem;font-weight:600;padding:3px 7px;border-radius:3px;line-height:1.3;white-space:nowrap}.ds-god-wolf{color:#f0b398;background:#413038}.ds-god-lady{color:#b3e1d2;background:#263e3b}.ds-god-angels{color:#ddd0fe;background:#3a304d}.ds-god-dust{color:#d5d6e0;background:#353441}"
+    },
+    {
+      "name": "Travel Instruction",
+      "kind": "card",
+      "refersTo": "travel-card",
+      "description": "A flat inset panel holds the immediate location instruction.",
+      "html": "<p class=\"ds-travel\"><svg width=\"23\" height=\"23\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg><span>Folge der nächsten Reiseetappe.</span></p>",
+      "css": ".ds-travel{font-family:system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;display:flex;gap:13px;background:var(--panel, #201e2e);color:var(--text, #edeaf5);padding:16px 18px;font-size:.9rem;line-height:1.65;margin:0}.ds-travel svg{flex-shrink:0;color:var(--accent, #dfa78d);margin-top:3px}.ds-travel span{max-width:74ch}"
+    },
+    {
+      "name": "Checklist Row",
+      "kind": "custom",
+      "refersTo": "check-row",
+      "description": "An open reading row with an explicit completion mark.",
+      "html": "<label class=\"ds-check-row\"><input type=\"checkbox\" checked><span>Die nächste Aktion markieren.</span></label>",
+      "css": ".ds-check-row{font-family:system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;display:flex;align-items:flex-start;gap:13px;padding:13px 0;cursor:pointer;font-size:.93rem;line-height:1.65;color:var(--text, #edeaf5)}.ds-check-row span{max-width:74ch}.ds-check-row input{margin:5px 0 0;appearance:none;width:19px;height:19px;flex:0 0 19px;border:1px solid #82768f;background:transparent;border-radius:3px;position:relative;cursor:pointer}.ds-check-row input:checked{background:var(--accent, #dfa78d);border-color:var(--accent, #dfa78d)}.ds-check-row input:checked:after{content:\"\";position:absolute;width:9px;height:5px;border-left:2px solid var(--ground, #171622);border-bottom:2px solid var(--ground, #171622);transform:rotate(-45deg);left:4px;top:4px}.ds-check-row input:checked+span{color:var(--muted, #bab4cd)}.ds-check-row input:focus-visible{outline:2px solid var(--lavender, #b4acf0);outline-offset:4px;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Night Atlas",
+    "overview": "Night Atlas is a quiet expedition register: indigo navigation beside an aubergine reading ground, with mist lavender numerals that make the current place easy to find. Peach and mint distinguish the two builds without replacing written names or completion marks.\n\nSelf-hosted Chivo headings give the atlas its restrained voice; system sans-serif keeps German instructions comfortable to read beside the game. Thin rules, open rows and flat tonal surfaces provide structure. This code-first system has no approved image composition or shipping raster assets; review screenshots are QA evidence.",
+    "keyCharacteristics": [
+      "Indigo register and aubergine reading ground.",
+      "Lavender numbering; peach Wolf and mint Lady accents.",
+      "Restrained Chivo headings and comfortable sans-serif reading text.",
+      "Flat tonal depth, open rows and explicit completion marks."
+    ],
+    "rules": [
+      {
+        "name": "The Build Accent Rule",
+        "body": "Use peach for Wolf and mint for Lady; keep lavender for navigation and numbering. Pair color with names and status marks.",
+        "section": "colors"
+      },
+      {
+        "name": "The Reading Voice Rule",
+        "body": "Use Chivo for headings and prominent route numbers; keep instructions and controls in the system sans-serif stack.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Atlas Rule",
+        "body": "Separate regions with tonal fields and thin rules. Do not add decorative shadows or simulated parchment.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do preserve the indigo register, aubergine reading field and lavender numbering.",
+      "Do pair build accents and completion colors with written names, numbers or explicit marks.",
+      "Do keep keyboard focus visible and disable marker motion when reduced motion is requested.",
+      "Do keep long instructions in open reading rows with the observed comfortable line length."
+    ],
+    "donts": [
+      "Don't replace Chivo headings with a system display face.",
+      "Don't introduce decorative fantasy parchment, bevels or dashboard-style tile grids.",
+      "Don't use screenshots as shipping artwork or invent a raster-led composition."
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+# Dependencies and generated build directory; the offline HTML is versioned.
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Local settings, caches and progress exports.
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+.fallow/
+Moonring-Fortschritt*.json
+
+# Keep the durable design system; omit temporary design and review records.
+.impeccable/*
+!.impeccable/config.json
+!.impeccable/design.json
+!.impeccable/surfaces/
+.impeccable/surfaces/*
+!.impeccable/surfaces/*.md
