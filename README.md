@@ -13,6 +13,8 @@ Lade das Repository über **Code → Download ZIP** herunter und entpacke es, od
 
 Beide Builds beginnen neutral ohne Eid. Reiseplan, genaue Kräfte-Kaufreihenfolge und Ausrüstung wechseln mit dem Build. Story-Enden und Rätselhilfen sind zunächst eingeklappt. Markierungen und Notizen werden pro Build im Browser gespeichert; unter „Quellen & Speicher“ kannst du sie als JSON sichern und übertragen. Browser können für Datei und Server getrennte Speicher verwenden.
 
+Die Ausrüstungsliste beginnt bei Dagger, Cap, Cotton Tunic und Leggings. Jeder Einkaufs-Schritt zeigt Preis, Stat-Anforderung, Gewichtsänderung und eine Möglichkeit zum Behalten oder Überspringen. Versorgung zuerst bezahlen und nur einzelne Teile austauschen; Zwischenstufen und vollständige Sets sind keine Kaufpflicht. Gewicht, Dodge, Stealth und die Vergleichsvorschau werden separat erklärt.
+
 Bei einem Wechsel der Webadresse oder des Offline-Dateipfads die JSON-Sicherung unter „Quellen & Speicher“ laden. Bereits gespeicherter Fortschritt am selben Browser-Ursprung wird auch aus dem bisherigen Speicherschlüssel übernommen.
 
 Die Regeln wurden gegen die lokal installierte PC-Fassung **0.0.958 / Steam-Build 24843312** geprüft. Reise- und Build-Reihenfolge sind Empfehlungen; prozedurale Räume, Gold und dynamische Ladenpreise sind variabel. Ein vollständiger neuer Spieldurchlauf wurde nicht durchgeführt. Ausführliche Primärbelege stehen in **research-powers.md**, **research-route.md**, **research-egg.md** und **research-cemetery.md**. Die Spielinstallation wurde nur gelesen.

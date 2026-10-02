@@ -181,3 +181,39 @@ P Orts-/Kartenzuordnung: `data/ObjectData - Sheet1.csv:389–393`; `state_game.l
 ### Tooth of Sleathen passt in beide Builds
 
 **Tooth of Sleathen hat keine Attributanforderung**, Gewicht **10**, **einhändig** (`hands=1`), Kategorie Nahkampfwaffe. Beide Builds können für den Sonderkampf ihre bisherige Nahkampfwaffe durch den Tooth ersetzen und das Schild behalten. Ein ausgerüsteter Bogen zählt weiterhin zur Last; Tooth ersetzt Mace12 durch10, beziehungsweise Sword12 durch10, also wird die Last bei diesen beiden Sets um2 geringer. Bei Dagger4→Tooth10 steigt sie um6; Anfänger mit frühem B-Set deshalb Last neu prüfen und bei Bedarf Cloak/zusätzliche Waffe ablegen. Tooth darf nicht bloß im Rucksack liegen: für den Sleathen-Kampf wirklich ausrüsten. P `data/ObjectData - Sheet1.csv:35` (alle fünf `*Req=0`, `weight=10`, `hands=1`); Sleathens Spezialwaffenbedingung `data/ActorData - Sheet1.csv:175`; ausgerüstete Last `state_game.lua:10474–10525`.
+
+## Nachprüfung: Startausrüstung, Anlegen und einzelne Käufe
+
+Die frühere Set-Tabelle oben belegt mögliche Kombinationen, keine Pflicht-Einkaufsliste. Der Guide verwendet jetzt sparsamere Zwischenstände mit einzelnen Austauschen. Phasen wie „nach Lifesight“ sind Empfehlungen; tatsächliche Attribute und aktuelle Ausrüstung entscheiden. Ohne genügend Versorgungsgold bleibt der vorhandene Gegenstand an.
+
+**Start:** `state_game.lua:1186–1234` gibt und rüstet Dagger, Cap, Cotton Tunic und Leggings aus. Die normalen Gewichte sind 4 + 1 + 8 + 1 = **14**; die ebenfalls ausgerüsteten Rocks haben Gewicht 0 (`ObjectData - Sheet1.csv`, Einträge `dagger`, `hat_cap`, `tunic`, `leggings`, `throwing_stones`). Die vier Startteile müssen nicht gekauft werden. `player_stats.lua:80–93` startet STR/PER/END/FIN/INT bei 0 und mit 100 Gold.
+
+**Anlegen ist keine Kaufkette:** `inventory_panel.lua:403–429` prüft Identifizierung, freie Hände und aktuelle Attribute. `state_game.lua:10535–10560` prüft STR/FIN/INT/END/PER sowie Zweihand-Nahkampfwaffe gegen Schild. Keine dieser Stellen verlangt den Besitz einer schwächeren Zwischenstufe oder einen bestimmten Spielerlevel. Die Ausrüstungskapazität ist dort keine harte Anlegesperre. Empfehlungen im Guide bleiben trotzdem unter der Kapazität. Normale Rüstung und die genannten normalen Schilde haben keine Stat-Anforderung; Mace benötigt END 5, Shortsword STR 5, Sword STR 10, Shortbow PER 5, Longbow PER 10.
+
+**Vergleichsvorschau:** `state_game.lua:10636–10657` verwendet das markierte Objekt im Buy-/Sell-/Inventory-Panel für die potenziellen Attribute. `getRawPlayerBurdenAndMaxBurden` ersetzt das Objekt im passenden Slot für die Lastvorschau (`10474–10525`). `character_panel.lua:166–170,594–616` zeigt aktuelle und potenzielle Last/Dodge. Markieren allein kauft oder rüstet das Objekt nicht aus. Die Lastanzeige rundet mit `math.ceil`; daher nicht aus der gerundeten Anzeige eine große freie Reserve ableiten.
+
+**Last senkt Dodge auch unter der Kapazität:** `state_game.lua:10567–10604` berechnet den Bewegungs-Zeitmultiplikator unter der Kapazität als `0.8 + 0.2 × Last/Kapazität`, darüber als `Last/Kapazität`. `getPlayerDodge` (`20850–20863`) dividiert den FIN-basierten Dodge durch diesen Multiplikator inklusive Sneak-Zustand. Ein Schild kostet hier über sein Gewicht Dodge; kein gesonderter Schild-Abzug wurde in dieser Funktion gefunden. `data/Globals - Sheet1.csv:100–101,130–133` gibt Dodge-Minimum 0,1, Dodge-Maximum 0,25, minimale/maximale Gewichtskapazität 40/115 und Softcap 35.
+
+**Stealth ist zusätzlich gegenstandsabhängig:** `state_game.lua:11042–11084` summiert die Stealth-Modifikatoren aller ausgerüsteten Slots und berücksichtigt FIN/Sneak. Normale Leather Armour, Heater Shield, Steel Helmet und Mace jeweils −1; Kite Shield und Greatsword −2; Platemail Armour −3; Woolen Cloak +1. Mehr Gewicht allein ist hier kein Stealth-Abzug. P: `ObjectData - Sheet1.csv:13,22,182,186,190,202,208–209`.
+
+**Nachgerechnete sparsame Zwischenstände:**
+
+| Build / Attribute mindestens | Ausgerüstete Teile | Last / Kapazität |
+|---|---|---:|
+| Beide, END 0 | Dagger + Cap + Cotton Tunic + Leggings | 14 / 40 |
+| Wolf, STR 5, END 0 | Shortsword + Cap + Cotton Tunic + Leggings + Buckler | 30 / 40 |
+| Wolf, STR 10, END 0 | Sword statt Shortsword im vorigen Set | 32 / 40 |
+| Wolf, STR 10, END 5 | Sword + Cap + Leather Armour + Leggings + Buckler | 39 / 50,71 |
+| Wolf, STR 10, END 5 | Voriges Set + Leather Gloves; danach Leather Helmet statt Cap | 41; danach 44 / 50,71 |
+| Wolf, STR 10, END 10 | Sword + Leather Armour/Gloves/Greaves/Helmet + Heater + Lightning-bolt Amulet | 56 / 61,43 |
+| Wolf, STR 10, PER 5, END 15 | Voriges Set + Shortbow | 66 / 72,14 |
+| Lady, PER 5, END 0 | Shortbow + Dagger + Cap + Cotton Tunic + Leggings | 24 / 40 |
+| Lady, PER 10, END 0 | Longbow statt Shortbow im vorigen Set | 30 / 40 |
+| Lady, PER 10, END 5 | Voriges Set + Leather Gloves + Buckler | 42 / 50,71 |
+| Lady, PER 10, END 10 | Longbow + Mace + Cap + Cotton Tunic + Leggings + Gloves + Buckler + Lightning-bolt Amulet | 51 / 61,43 |
+| Lady, PER 10, END 10 | Leather Armour statt Tunic im vorigen Set | 58 / 61,43 |
+| Lady, PER 10, END 15 | Longbow + Mace + Leather Armour/Gloves/Greaves/Helmet + Round Shield + Amulett | 68 / 72,14 |
+
+Amulett nur nach tatsächlichem Fund; ohne Amulett jeweils 1 weniger. Dagger statt Mace spart 8. Keine kaufbare Pflicht-Zweitwaffe beim Wolf: Hurl bietet bereits einen Fernangriff. Normaler Laden-Crossbow wiegt 16 (`crossbow`, Zeile 62); `crossbow_fast` ist ein anderer Datensatz mit ebenfalls Anzeigename Crossbow und Gewicht 8, nicht die Basis für die normale Ladenempfehlung.
+
+**Budget und Überspringen sind Empfehlungen:** Erst fehlende Versorgung bezahlen, dann einen Gegenstand kaufen und erneut vergleichen. Dagger → Sword bei STR 10 spart den Shortsword-Kauf, aber nur, wenn der Spieler die Zwischenzeit sicher übersteht. Shortbow bleibt bei fehlenden 5.000 Gold für Longbow brauchbar. Für Rüstung gilt aktuelle Last − Gewicht des alten Teils + Gewicht des neuen Teils. Beispiele verwenden normale Basispreise, keine garantierten Ladenpreise oder Goldbelohnungen. Es wurde kein vollständiger neuer Spieldurchlauf getestet.
