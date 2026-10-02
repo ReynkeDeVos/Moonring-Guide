@@ -41,6 +41,7 @@ export const builds:Record<BuildId,{name:string;subtitle:string;description:stri
 };
 // Explicit task IDs keep saved checkmarks attached to tasks moved along the route.
 const s=(id:string,title:string,region:string,direction:string,texts:(string|Task)[],giftIds:string[],gear:string,source:string,gate?:string,hint?:string,spoiler=false):Stage=>({id,title,region,direction,tasks:texts.map((text,i)=>typeof text==='string'?{id:`${id}-${i}`,text}:text),gifts:giftIds,gear,source,gate,hint,spoiler});
+const hearthavenLore:Task = {id:'hearth-hidden-library',text:'Die unsichtbare / falsche Wand in Hearthaven finden und den verborgenen Bereich erkunden. Hinter der ersten Wand folgen mehrere weitere unsichtbare Wände: auch dort nach Durchgängen suchen und alle Räume durchstöbern. Dahinter warten zahlreiche Bücher mit reichlich Lore zur Welt, den Göttern und Calderas Geschichte. Die Bücher und Regale untersuchen und lesen.'};
 const stoneInquiry:Task[] = [
  {id:'yarrow-stone-hint',text:'Nach der Höhle mit dem Bewohner in Yarrow über den Black Eyed Stone sprechen. Er liest die Inschrift; nach Serpent\'s Eye fragen und seinem Hinweis auf die Priester in Moon-upon-Thoss folgen. Den Stein mitnehmen.'},
  {id:'prepare-1',text:'Jetzt nach Moon-upon-Thoss: Mit Black Eyed Stone beim Priest of Balance nach Serpent\'s Eye → predecessor → Ruined Quarter fragen. Erst durch diese Antworten erfährst du den Namen Nevin und seinen Aufenthaltsort. Danach im nordwestlichen Ruinenviertel suchen und Nevin sagen. Seinen Antworten folgen: knew → truths → Serpents → hope → moons. Erst wenn er Roche erwähnt, nach Roche fragen; den Hinweis auf Barrow-Linn für den späteren Stadtbesuch notieren.'}
@@ -71,8 +72,9 @@ s('winter','Wintersholl','Städtereise','Von der Hauptstadt zurück in Richtung 
 s('hearth','Hearthaven','Städtereise','Nach der Hauptstadtspur zum Stein über die Straßen nordwärts ins Gebirge nach Hearthaven.',[
  'Hearthaven besuchen: +2 Angels-Devotion. Lifesight ist der geplante dritte Kauf. Wartet Hurl noch auf die Hirschjagd, Lifesight trotzdem jetzt lernen: END 5 hilft bei der Last.',
  'Priest of the Blind Angels: Relic → Tower of Veils → no way in.',
- 'Die Spur red cloak notieren; bei der nächsten Rückkehr nach Wintersholl mit Bewohnern darüber sprechen. Die Spur führt nach Harrowdus.'
-],['lifesight'],'Nach Lifesight nicht das ganze Lederset kaufen. Erst bei Restgold Leather Armour statt Cotton Tunic (800): mit Sword + Starthelm/-beinen + Buckler Last 39 / 50,71. Optionale Gloves: 41. Cap und Leggings zunächst behalten.','DialogueData.csv:175–177,210–211; ObjectData.csv'),
+ 'Die Spur red cloak notieren; bei der nächsten Rückkehr nach Wintersholl mit Bewohnern darüber sprechen. Die Spur führt nach Harrowdus.',
+ hearthavenLore
+],['lifesight'],'Nach Lifesight nicht das ganze Lederset kaufen. Erst bei Restgold Leather Armour statt Cotton Tunic (800): mit Sword + Starthelm/-beinen + Buckler Last 39 / 50,71. Optionale Gloves: 41. Cap und Leggings zunächst behalten.','DialogueData.csv:175–177,210–211; ObjectData.csv; HearthavenTriggers.csv; strings.lua:138–159; research-secrets.md'),
 s('red','The Red Grove','Städtereise','Von Hearthaven zurück über die Straßen Richtung Westen/Südwesten nach The Red Grove.',[
  'The Red Grove besuchen: +2 Lady-Punkte. Feast ist der geplante vierte Kauf. Falls Hurl noch fehlt, Feast vorziehen: PER 5 macht Shortbow für die spätere Jagd anlegbar.',
  'Von einem Bewohner Blood is all erfahren und dies der Handmaiden sagen.',
@@ -90,8 +92,9 @@ s('red','The Red Grove','Städtereise','Von Moon-upon-Thoss auf den westlichen S
 ],['feast'],'Longbow ab PER 10 (5.000); ein Zwischenkauf ist keine Pflicht. Shortbow weiter benutzen, wenn Pfeile und Heilung sonst unbezahlbar werden. Longbow + Dagger + Startkleidung: Last 30 / 40; mit Buckler schon 40, deshalb keine weitere Last ergänzen.','DialogueData.csv:51–59,131–148,363–380,422–425; achievements.lua:45–51; ObjectData.csv; research-cemetery.md','Ein bis zwei Gaben sind unsere Orientierung für die frühe Höhle, kein garantierter Sieg. Der Eingang bleibt bis zum Master Key gesperrt. Feast hilft nur gegen geeignete Gegner; Heiltränke behalten.'),
 s('hearth','Hearthaven','Städtereise','Nach der Hauptstadtspur zum Stein über die Straßen nordwärts ins Gebirge nach Hearthaven.',[
  'Hearthaven besuchen: +2 Angels-Devotion. Lifesight als dritten Kauf lernen.',
- 'Priest of the Blind Angels: Relic → Tower of Veils → no way in. Die Spur red cloak notieren.'
-],['lifesight'],'Dagger als leichte Reserve behalten. Mace wäre ab END 5 anlegbar (1.000), aber Longbow + Mace + Startkleidung + Gloves + Buckler wiegen 50 / 50,71. Als Standard bis END 10 warten; zuerst nur einen bezahlbaren Slot verbessern.','DialogueData.csv:175–177; ObjectData.csv'),
+ 'Priest of the Blind Angels: Relic → Tower of Veils → no way in. Die Spur red cloak notieren.',
+ hearthavenLore
+],['lifesight'],'Dagger als leichte Reserve behalten. Mace wäre ab END 5 anlegbar (1.000), aber Longbow + Mace + Startkleidung + Gloves + Buckler wiegen 50 / 50,71. Als Standard bis END 10 warten; zuerst nur einen bezahlbaren Slot verbessern.','DialogueData.csv:175–177; ObjectData.csv; HearthavenTriggers.csv; strings.lua:138–159; research-secrets.md'),
 s('winter','Wintersholl','Städtereise','Zurück Richtung Yarrow, dann ostwärts nach Wintersholl.',[
  'Priester: Garden → not far → the beast → hunting grounds. Die Ziele markieren lassen.',
  'Bewohner nach red cloak fragen: die Tower-Schlüsselspur führt nach Harrowdus.',
