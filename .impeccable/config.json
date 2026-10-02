@@ -1,1 +1,18 @@
-{"buildPath":"code"}
+{
+  "buildPath": "code",
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "src/styles.css"
+        ],
+        "createdAt": "2026-10-02T16:37:23.373Z",
+        "reason": "Agent and independent finish reviewers: input[type=checkbox]:checked:after uses a 9 by 5 px rotated left/bottom border to draw the checkbox tick; it is not a card accent stripe."
+      }
+    ]
+  }
+}
