@@ -1,6 +1,8 @@
 # Dependencies and generated build directory; the offline HTML is versioned.
 node_modules/
 dist/
+dist-cloudflare/
+.cloudflare/
 *.tsbuildinfo
 
 # Local settings, caches and progress exports.

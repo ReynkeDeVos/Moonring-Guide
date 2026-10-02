@@ -143,8 +143,37 @@ s('repository','Repository','Letztes Relikt','Empfohlener Sammelkurs: Harrowdus 
  'Magma Chamber: Map #5. Mit dem Schiff zur äußersten Südküste, südlich Moon-upon-Thoss und südwestlich Harrowdus. Am Steg an der Südseite der kleinen Landstelle anlegen, wenige Felder nordwärts zur Ruine. Amberfallen und Turrets beachten; Fragment aus dem Container nehmen.',
  'Mit fünf Fragmenten entsteht automatisch Locus Box. An Runacarr benutzen, um Thossacarr sichtbar zu machen.',
  'Über die Nordverbindung des Henges auf die Insel; vom Insel-Henge nordöstlich zum Repository. Dungeon abschließen; Pale Heart und Vermier\'s Amulet nehmen.'
-],[], 'Magma Chamber braucht das Schiff. Heilung, Statusmittel und Fernangriff vorbereiten; Water gegen Feuer für Enflamed Glade. Karten nur für fehlende Orte kaufen; gegen Maschinen optional Sabotage erwägen.','ObjectData.csv:389–393; world_data.lua:66–70; state_game.lua:22502–22533; OverworldTriggers.csv; treasure_sets.lua:799–805,871–875','Hengeziele wirklich besuchen/sehen; nur eine Kartenmarkierung genügt nicht. Vor Bael\'s Tomb und Repository volle Reserven.','Sekundäre Rechercheanker: Poison Cross (217,204), Venom Cube (306,219), Bael\'s Tomb (173,228), Enflamed Glade (313,268), Magma Chamber (267,412). Folge den Kartenmarkern statt einer ungeprüften geraden Linie durch Berg oder Meer. Lens Keeper: zuerst Shield Crystals zerstören; nach Phasenwechsel erneut.')
+],[], 'Magma Chamber braucht das Schiff. Heilung, Statusmittel und Fernangriff vorbereiten; Water gegen Feuer für Enflamed Glade. Karten nur für fehlende Orte kaufen; gegen Maschinen optional Sabotage erwägen.','ObjectData.csv:389–393; world_data.lua:66–70; state_game.lua:22502–22533; OverworldTriggers.csv; treasure_sets.lua:799–805,871–875','Hengeziele wirklich besuchen/sehen; nur eine Kartenmarkierung genügt nicht. Vor Bael\'s Tomb und Repository volle Reserven.','Sekundäre Rechercheanker: Poison Cross (217,204), Venom Cube (306,219), Bael\'s Tomb (173,228), Enflamed Glade (313,268), Magma Chamber (267,412). Folge den Kartenmarkern statt einer ungeprüften geraden Linie durch Berg oder Meer. Lens Keeper: zuerst Shield Crystals zerstören; nach Phasenwechsel erneut.'),
+s('egg','The Egg · DX','Vor dem Abschluss','Mit dem Schiff von Barrow-Linn südwestwärts zur weit westlichen, bergigen Küstenbucht. Von der Meeresseite an den nach Osten zeigenden Steg anlegen; an Land sechs Weltkacheln westwärts durch das Gehölz zum großen Ei.',[
+ 'Nach den fünf Relikten die nummerierte Gabenliste und das späte END-15-Set fertigstellen. In einer Stadt gesund, mit voller Energie, Nahrung und Reserven starten. The Egg jetzt einschieben, bevor du eine der Schlussrouten beginnst.',
+ 'Den Anleger und das Ei erreichen. Sekundäre Kartenanker: Steg (120,341), Ei (114,341), deutlich südwestlich Barrow-Linn. Kein gerader Landweg durch die umliegenden Berge.',
+ 'Das große Ei anrempeln; danach auf den geöffneten Eingang gehen und Enter drücken. Die Einwegwarnung erst bestätigen, wenn du für den langen Dungeon bereit bist. Bei „Dee Ell See“ die DLC-Installation in Steam prüfen.',
+ 'Den Lauf bis Etage 100 abschließen, den Preis aufnehmen und durch den dortigen Ausgang wieder an die Oberfläche zurückkehren. Danach in einer Stadt auffüllen und erst dann den Abschluss wählen.'
+],[],w?'Sword + Heater Shield, leichtes Lederset; Hurl als Distanzhilfe. Das bisherige 70/72,14-Set bleibt gültig. Heil-/Statusmittel, Nahrung, Water und Energieversorgung auffüllen.':'Longbow + Mace + Round Shield, leichtes Lederset; das bisherige 68/72,14-Set behalten. Pfeile, Heil-/Statusmittel, Nahrung, Water und Energieversorgung auffüllen.','OverworldTriggers.csv:205,384; Overworld.png; actor.lua:4213–4234; state_game.lua:11463–11495; world_data.lua:205–314; research-egg.md','DX ist Zusatzinhalt; für diese Route ist es eingeplant. Zugang hat kein Relikt-Gate, die späte Einordnung ist unsere Vorbereitungsempfehlung. Auf Etage 1 gibt es keinen Rückweg nach draußen. Neutral Howl/Moonlight nur mit aktuell mindestens 120 maximaler Energie benutzen.')
 ];
+}
+export const eggFloorIds=Array.from({length:100},(_,i)=>`egg-floor-${i+1}`);
+export const eggBands=[
+ {enemies:'Hive, Käfer, Fledermäuse, Spinnen, Wölfe und erste humanoide Gruppen. Minibosse können Dire Wolf, Hunter oder Spectral Knight sein.',tip:'Die normale Kampfroutine trägt den Lauf. Früh prüfen, ob du Energie und Heilung zuverlässig einteilen kannst.'},
+ {enemies:'Stärkere Varianten der frühen Gruppen; Dolls werden möglich.',tip:'Vor unbekannten Türen deine Stellung und freie Rückzugsfelder sichern.'},
+ {enemies:'Ghost Bats, Rotlings und Light Spectres; Gazer werden als Minibosse möglich.',tip:'Rot- und Blindheitsmittel für später behalten. Die ersten leichten Etagen sind keine Zusage für den Rest.'},
+ {enemies:'Silverwolves, Amberghasts und stärkere Untote; Reaper und Death-Maidens werden möglich.',tip:'Sichtlinien und Status im Blick behalten. Ab Etage 34 können Bell-Räume bis zu zwei Bells vorsehen.'},
+ {enemies:'Forgotten Hulks, Hunters, Creepers, Boggarts und Mimics; Darknight wird als Miniboss möglich.',tip:'Räume und Truhen bewusst sichern. Ein vollständiges Leerräumen jeder Etage ist kein Pflichtziel.'},
+ {enemies:'Bug Eyes, Ghosts und Blindwolves; Great Gazer wird als Miniboss möglich.',tip:'Lifesight vor verdeckten Begegnungen nutzen. Keine sichere Auffüllung durch zufällige Beute erwarten.'},
+ {enemies:'Borog, Techs, Impalers und Shimmershee; mechanische Gruppen werden möglich.',tip:'Feast bleibt ein Gelegenheitswerkzeug. Unabhängige Heilung aufheben; ab Etage 67 sind bis zu drei Bells vorgesehen.'},
+ {enemies:'Zusätzlich Constructs, Spikers, Bombers und Dice.',tip:'Freie Bewegungsfelder und einen normalen Fernangriff bewahren. Teure Gaben gezielt einsetzen.'},
+ {enemies:'Stärkere Techs/Constructs, Firewalkers und Piercers.',tip:'Feuer- und Statusreserven vor weiterem Abstieg prüfen. Lebensmittel ersetzen keine HP-Heilung.'},
+ {enemies:'Auf 91–99 stärkste Gruppen, einschließlich Dark Spectres. Reaper, Darknight und Great Gazer im Miniboss-Pool; 100 ist eine feste Abschlusskarte.',tip:'Auf 99 vor dem Abstieg heilen, Status bereinigen und Energie, Munition sowie Amulett prüfen. Von Etage 100 führt keine normale Treppe zurück zu 99.'}
+];
+export function eggFloorMarkers(n:number){
+ if(n===100)return 'Feste Abschlusskarte · Hilfe unten eingeklappt';
+ const tags:string[]=[];
+ if(n%4===3)tags.push('Maiden möglich');
+ if(n%4===0)tags.push(`Bells vorgesehen (bis ${n<=33?1:n<=66?2:3})`);
+ if(n%7===6)tags.push('Library vorgesehen');
+ if(n===34||n===67)tags.push('Mehr Bells ab diesem Band');
+ if(n===99)tags.push('Vor Abstieg zu 100 vorbereiten');
+ return tags.join(' · ')||'Abstieg, nötige Schlüssel, Reserven';
 }
 export const equipment = {
  wolf:[
@@ -178,11 +207,11 @@ export const shops:Record<BuildId,{item:string;price:string;where:string;require
  ]
 };
 export const finale = [
- {title:'Erster Abschluss',text:'Alle fünf Relikte sammeln: Steadfast Hand, All-seeing Eye, Trickster\'s Mask, Crimson Candle und Pale Heart. Nach Moon-upon-Thoss zum Archon zurückkehren und mit dem Thron interagieren. Das löst das erste Ende aus. Wenn du die alternative Route möchtest, vor der Throninteraktion weiterlesen.'},
+ {title:'Erster Abschluss',text:'Alle fünf Relikte sammeln: Steadfast Hand, All-seeing Eye, Trickster\'s Mask, Crimson Candle und Pale Heart. Für die DX-Route zuerst The Egg abschließen. Nach Moon-upon-Thoss zum Archon zurückkehren und mit dem Thron interagieren. Das löst das erste Ende aus. Wenn du die alternative Route möchtest, vor der Throninteraktion weiterlesen.'},
  {title:'Roche und die Glocke',text:'Mit Black Eyed Stone zu Hermit\'s Hut auf der Insel nordwestlich Red Grove (Welt 140,172), per Schiff oder bekannter Henge-Verbindung. Gespräch: Roche → lives → Serpents → guardian → nothing → learned much / gods / move on → Tether → true names → too old → shades → free them. Tarthus notieren und Roche\'s Bell nehmen.'},
  {title:'Vier Geister finden',text:'Die Glocke weist zur nächsten offenen Stelle. Auf der Weltkachel in Lokalansicht wechseln und in der Nähe klingeln: Yarrow am Wasser nordwestlich der Farm (lokal 26,43), Weltmeer (224,397), Sumpf südlich Harrowdus (312,333), Kraterrand nördlich Wintersholl (302,80). Geister besiegen und Caryon, Anun, Balatoth, Hezreh erfahren. Wiederholtes Klingeln kann Statusbelastungen verursachen.'},
  {title:'Issacarr öffnen',text:'Bael\'s Key aus der Ossuary in Barrow-Linn am geschützten südlichen Stein in Issacarr, südöstlich Harrowdus (317,319), anwenden. Nostacarr (404,371) wird aktiv. Die Südseite der Henge-Verbindung benutzen: vom Norden zur Warpmitte gehen. Auf der Finaleinsel liegt The Lament nördlich des Henges (404,364).'},
- {title:'Vor The Lament',text:'Nach allen fünf Relikten ist dies die empfohlene Fortsetzung; kein zusätzliches Relikt-Gate am Eingang wird behauptet. Alles vorher auffüllen: Heilung, Energie, Ammo, Statusmittel. Fünf Arenen und eine sechste Boss-Ebene; der Eingang schließt. Passende normale Ausrüstung genügt als Ziel, keine Legendary-Pflicht.'},
+ {title:'Vor The Lament',text:'Nach allen fünf Relikten ist dies die empfohlene Fortsetzung; kein zusätzliches Relikt-Gate am Eingang wird behauptet. The Egg vorher abschließen. Alles danach erneut auffüllen: Heilung, Energie, Ammo, Statusmittel. Fünf Arenen und eine sechste Boss-Ebene; der Eingang schließt. Passende normale Ausrüstung genügt als Ziel, keine Legendary-Pflicht.'},
  {title:'Die fünf Altäre',text:'Im Tether-Raum Bodensymbole beachten; Altäre stehen je nach Run unterschiedlich. In Rufreichweite 2 am passenden Altar den Namen rufen: Wolf Tarthus; Harlequin Caryon; Dust Anun; Lady Balatoth; Angels Hezreh. Nach allen fünf erlischt der Schild; dann Tether bekämpfen. Todesblick kann aus Distanz 4 gefährlich werden: Blicklinie vermeiden. Der letzte Altar löst zudem einen Lebens-/Statusangriff auf dich und deine Helfer aus.'},
  {title:'Nach dem finalen Kampf',text:'The Lament verlassen. Dadurch verändert sich die Welt und die göttlichen Gaben, Devotion und Eid werden zurückgesetzt; Attributwerte und normale Ausrüstung bleiben wichtig. Für den Abschluss nach Moon-upon-Thoss zum Archon und mit dem Thron interagieren. Danach keine Kampfroute mehr auf Feast oder Howl aufbauen.'}
 ];
