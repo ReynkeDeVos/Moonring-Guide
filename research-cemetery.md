@@ -1,0 +1,46 @@
+# Moonring: Yarrow Cave nach den ersten Gottfertigkeiten
+
+Stand: 2. Oktober 2026. Primärprüfung anhand der lokal installierten Steam-Fassung **0.0.958**; Quellenkopie unter `/tmp/moonring-route/game`, wie in [research-route.md](research-route.md) dokumentiert. Es wurden ausschließlich Quellen gelesen, keine Spieldaten oder Spielstände verändert. Diese Notiz begründet die redaktionelle Anfängerroute, keinen erzwungenen Spielablauf.
+
+## Ergebnis und empfohlene Einordnung
+
+**Die Höhle gehört früh in die Route, aber nicht direkt vor die ersten Gottfertigkeiten.** In Yarrow zunächst Carems Notiz, Tiny Key und Graveyard Key besorgen. Nach ein bis zwei frühen Gaben mit aufgefüllten Reserven zurückkehren: im Wolf-Pfad nach Wintersholl mit Slam, im Lady-Pfad nach The Red Grove mit Gash und Feast. Beide Rückkehrpunkte liegen in **Etappe 3**, deutlich vor der vollständigen Städtereise und der späteren Serpent’s-Eye-/Roche-Spur.
+
+Diese Einordnung berücksichtigt die Rückmeldung des Nutzers aus eigener Spielerfahrung: Der Dungeon ist mit etwas früher Verbesserung gut machbar, beim unmittelbaren Einstieg aber schnell tödlich. Die zunächst gewählte Einordnung nach allen fünf Gottstädten war für den gewünschten Guide zu vorsichtig. Die Quellen belegen keinen festen Bedarf an drei Gaben, STR10, END5 oder einer vollständigen Städtereise.
+Das ist eine vorsichtige **Empfehlung**, keine mechanische Pflicht. Spieler haben die Höhle schon mit Startausrüstung geschafft; andere scheiterten wiederholt und empfehlen ausdrücklich erst die Stadtbesuche und Geschenkverbesserungen. Den vom Nutzer erinnerten Guide mit dem exakten Ausdruck „Beginner Trap“ konnte die gezielte Suche nicht identifizieren. Die zugrunde liegende Warnung ist durch Erfahrungsberichte und die aktuelle Eingangssperre belegt. [Moving past Moon-Upon-Thoss](https://www.reddit.com/r/Moonring/comments/1f025ob/moving_past_moonuponthoss/), [Are you supposed to tackle the cemetery dungeon right away?](https://www.reddit.com/r/Moonring/comments/1dr215o/are_you_supposed_to_tackle_the_cemetery_dungeon/), [first dungeon](https://steamcommunity.com/app/2373630/discussions/0/4338734745069068242/).
+
+## Belegte Mechanik in 0.0.958
+
+- **Ort und Zugang:** Das Spiel nennt den Dungeon **Yarrow Cave**, interner Name `firstDungeon-01`, Eingang in Yarrow. Graveyard Key öffnet das Tor zum Familienfriedhof; die Höhle liegt dahinter. Der Friedhofsschlüssel und der spätere Dungeon-Ausgangsschlüssel sind verschiedene Gegenstände. P: `world_data.lua:87`; `data/save/YarrowTriggers.csv:18,22,30,36–37`; `data/ObjectData - Sheet1.csv:376`. Als externer Fundortbeleg beschreibt der [Moonring Full Guide](https://steamcommunity.com/sharedfiles/filedetails/?id=3272823842) diese Schlüsselkette und mahnt Vorbereitung vor dem Betreten an.
+- **Kein freier Rückweg nach dem Betreten:** `canReturn=false` und `needsExitKey=true`. Der Eingang zeigt die Warnung, dass Türen verriegeln und ein **Master Key** zum Verlassen nötig ist; bei Tod wird der Dungeon neu konfiguriert. P: `world_data.lua:87`; `dungeon_data.lua:684`; `globals.lua:407`; `state_game.lua:11468–11495`. Die Gefahrenwarnung gehört deshalb unmittelbar an den Anfangshinweis, bevor der Spieler hineingeht.
+- **Ziel statt vollständiger Gegnervernichtung:** `mainTreasureSet` ist der **Black Eyed Stone**. Die generierte Haupttruhe wird mit diesem Schatz und einem `exitKey`-Trigger versehen. Damit lautet der relevante Abschlussauftrag: Haupttruhe/Schlüssel erreichen, Stein nehmen und den Dungeon verlassen; „alle Gegner töten“ ist keine hier belegte Bedingung. P: `dungeon_data.lua:695`; `state_game_dungeon_chunks.lua:1560–1570,3335–3363`. Auch ein [Spielerbericht für Anfänger](https://steamcommunity.com/app/2373630/discussions/0/604165449110835148/) rät nach Schlüssel und Stein direkt zum Ausgang, weil weiteres Erkunden die Reserven aufbraucht.
+- **Aktuelle Gegnerdaten:** Yarrow verwendet `hive_1`, `hornets_1`, `beetles_1`: Hornissen, Hornissennest und Käfer. Der Mini-Boss-Pool nennt **silverwolf**, der Boss-Pool `large_beetle`, dessen Anzeigename **shield bug** ist. Die ActorData nennt 220 Health für silverwolf und 150 für shield bug. P: `dungeon_data.lua:690–693`; `data/MonsterGroups - Sheet1.csv:2,7,12`; `data/ActorData - Sheet1.csv:49,123`. Das sind Datenwerte, keine garantierten Kampfergebnisse oder vollständige Liste jedes möglichen Sonderereignisses. Ältere Threads erwähnen Scarabs; sie stehen nicht in diesen aktuell geprüften Gruppen und sollten nicht als garantierte Höhlengegner genannt werden.
+- **Warum die Stadtbesuche helfen:** Jede der fünf Gottstädte liefert 2 Punkte bei ihrem Gott, alle fünf zusammen zusätzlich 2 Angels-Punkte. Geschenkkäufe erhöhen das jeweilige Attribut um 5. P: `achievements.lua:7,19,31,42,52,55,64`; `skill_tree.lua:37–76`; `globals.lua:488`. Punkte tatsächlich in Geschenke investieren; bloßes Reisen verbessert den ausgerüsteten Charakter noch nicht automatisch.
+- **Warum den Stein behalten:** Gespräche beim Balancepriester zu `Serpent's Eye` verlangen `black_eye_stone`. Roche weist beim Keyword `lives` den Spieler ohne Stein zurück; mit Stein erkennt er das Emblem und setzt `admittedRoche`. P: `data/DialogueData - Sheet1.csv:51–59,467–468`; Itembeschreibung `data/ObjectData - Sheet1.csv:375`. Der Stein ist für diese weitere Questspur relevant und kein vor dem ersten Stadtbesuch notwendiger Ausrüstungsfund.
+
+## Spielerberichte: Schwierigkeit und früher Abschluss
+
+**Erst reisen ist eine direkt belegte Spielerempfehlung:** In [Moving past Moon-Upon-Thoss](https://www.reddit.com/r/Moonring/comments/1f025ob/moving_past_moonuponthoss/) beschreibt DerKastellan fünf gescheiterte Versuche im vermeintlichen Anfänger-Dungeon und empfiehlt daraufhin die fünf Gottstädte, deren Punkte und frühe Kräfte. Der Bericht nennt dadurch verbesserte Attribute als Zeitpunkt für den nächsten Starterdungeon-Versuch. Die übrigen Build-/Blut-/Wirtschaftsaussagen des Threads wurden für diese Entscheidung nicht übernommen.
+
+**Ein sofortiger Abschluss ist möglich, wenn der Kampfablauf sitzt:** Im [Cemetery-Dungeon-Thread vom 29. Juni 2024](https://www.reddit.com/r/Moonring/comments/1dr215o/are_you_supposed_to_tackle_the_cemetery_dungeon/) meldet der Fragesteller zunächst mehr als zehn Fehlversuche und anschließend Erfolg nach dem Rat, bei verbrauchter Poise Abstand zu gewinnen. Der Wolf war sein wiederkehrendes Problem. Weitere Teilnehmer empfehlen einzelne Gegner, Poise-Erholung und das Nutzen der Umgebung. Das widerlegt eine starre Behauptung „am Anfang unmöglich“.
+
+**Steam bestätigt die Lernhürde:** [first dungeon](https://steamcommunity.com/app/2373630/discussions/0/4338734745069068242/) enthält einen frühen Erfolgsrat über Abstand, Poise und vorsichtiges Vorgehen; die Antworten sehen eine feste Gottbindung ausdrücklich als optional. [Any tips for a complete beginner?](https://steamcommunity.com/app/2373630/discussions/0/604165449110835148/) berichtet ebenfalls von mehreren Toden und besonders gefährlichen Wölfen. Die Berichte sind Erfahrungsquellen, keine offiziellen Mindestanforderungen.
+
+## Konkrete Bereitschaftsprüfung für die bestehenden Builds
+
+**Redaktionelle Orientierung, kein Mindestlevel oder garantierter Sieg:** Nach ein bis zwei frühen Gottfertigkeiten zurück nach Yarrow. Eine komplette Städtereise, Lifesight oder teure Waffen-Upgrades müssen dafür nicht abgewartet werden.
+
+| Build | Früher Rückkehrpunkt | Vorbereitung |
+|---|---|---|
+| Wolf/Nahkampf | Nach Wintersholl: **Slam** als erste Gabe, STR5 | Shortsword oder vergleichbare Waffe, leichte Ausrüstung und gegebenenfalls Buckler. Hurl als zweite Gabe kann helfen, muss aber erst durch weitere 2 Wolfpunkte bezahlt werden; kein Pflichtgrind vor der Höhle. |
+| Lady/Fernkampf | Nach The Red Grove: **Gash + Feast** als erste zwei Gaben | Vorhandenen Shortbow, Pfeile und Dagger als Nahkampfreserve verwenden; keinen Longbow- oder Lifesight-Kauf verlangen. Feast nur bei geeigneten Gegnern als Heilung nutzen. |
+
+Die Geschenk-, Waffen- und Punktebedingungen sind in [research-route.md](research-route.md) und [research-powers.md](research-powers.md) belegt. Die Auswahl von ein bis zwei Gaben als Rückkehrpunkt ist unsere Empfehlung anhand der Nutzererfahrung und der oben dokumentierten Berichte über frühe Abschlüsse; keine empirisch ermittelte Mindestanforderung.
+
+Für beide: gesund, mit voller Poise und Energie sowie Heilreserve starten; Waffenverschleiß und Burden prüfen. Gegner einzeln bekämpfen und bei sinkender Poise Abstand gewinnen. Nach Master Key und Black Eyed Stone den Dungeon verlassen. Abstand innerhalb der Höhle ermöglicht Poise-Erholung, aber keinen freien Rückweg durch die Eingangstreppe.
+
+## Formulierung im Guide
+
+**Am Start:** „Die Höhle hinter dem Familienfriedhof zunächst auslassen. Nach ein bis zwei frühen Gottfertigkeiten zurückkehren, in dieser Route bereits in Etappe 3. Mit Startausrüstung direkt hineinzugehen kann schnell tödlich enden. Zum Verlassen brauchst du den Master Key.“
+
+**Frühe Rückkehr in Etappe 3:** Wolf nach Slam in Wintersholl, optional mit Hurl; Lady nach Gash und Feast in The Red Grove. Mit leichter Ausrüstung und aufgefüllten Reserven zum Familienfriedhof. Master Key und Black Eyed Stone holen, dann hinaus. Den Stein für die spätere Roche-Spur behalten.
