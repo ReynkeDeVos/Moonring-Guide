@@ -17,13 +17,13 @@ Beide Builds beginnen neutral ohne Eid. Reiseplan, genaue Kräfte-Kaufreihenfolg
 
 Die Ausrüstungsliste beginnt bei Dagger, Cap, Cotton Tunic und Leggings. Jeder Einkaufs-Schritt zeigt Preis, Stat-Anforderung, Gewichtsänderung und eine Möglichkeit zum Behalten oder Überspringen. Versorgung zuerst bezahlen und nur einzelne Teile austauschen; Zwischenstufen und vollständige Sets sind keine Kaufpflicht. Gewicht, Dodge, Stealth und die Vergleichsvorschau werden separat erklärt.
 
-**Inventar:** Startteile, Waffen, Rüstung, Schilde, Amulette und die optionalen legendären Fundstücke lassen sich unter „Ausrüstung“ einzeln als vorhanden markieren und wieder abwählen. Die Sammlung wird pro Build gespeichert, gesichert, geladen und mit dem Build zurückgesetzt. Besitzhäkchen beeinflussen weder Reiseetappen noch Gaben und berechnen keine ausgerüstete Last.
+**Inventar:** 91 geprüfte Gegenstände, nach Nah-/Fernkampfwaffen, Helmen, Körperrüstung, Handschuhen, Beinschutz, Schilden, Umhängen, Amuletten und Quest-Ausrüstung gegliedert, lassen sich unter „Ausrüstung“ einzeln als vorhanden markieren und wieder abwählen. Die Sammlung wird pro Build gespeichert, gesichert, geladen und mit dem Build zurückgesetzt. Die offene Liste zeigt pro Slot die passendsten Optionen für den gewählten Build zuerst; weitere situative oder weniger passende Teile sind darunter eingeklappt und bleiben markierbar. Die Sortierung ist eine Empfehlung nach Kampfrolle, Last und Attributplan, keine allgemeine Stärke- oder Einkaufsrangliste. Besitzhäkchen beeinflussen weder Reiseetappen noch Gaben und berechnen keine ausgerüstete Last. Bisherige Besitzhäkchen bleiben erhalten. Die besondere Egg-Belohnung bleibt in der dortigen Spoilerhilfe.
 
 **Goldreserve:** Auf jeder Guide-Ansicht steht gut sichtbar die Empfehlung, nach Ausrüstungskäufen mindestens **1.000 Gold** für Versorgung übrig zu lassen. Die Ausrüstungsseite erklärt den Nachschubpuffer mit Basispreisen und Kaufbeispielen. Am Spielstart wird die Reserve erst aufgebaut; für lange Expeditionen zusätzliche Vorräte besorgen.
 
 Bei einem Wechsel der Webadresse oder des Offline-Dateipfads die JSON-Sicherung unter „Quellen & Speicher“ laden. Bereits gespeicherter Fortschritt am selben Browser-Ursprung wird auch aus dem bisherigen Speicherschlüssel übernommen.
 
-Die Regeln wurden gegen die lokal installierte PC-Fassung **0.0.958 / Steam-Build 24843312** geprüft. Reise- und Build-Reihenfolge sind Empfehlungen; prozedurale Räume, Gold und dynamische Ladenpreise sind variabel. Ein vollständiger neuer Spieldurchlauf wurde nicht durchgeführt. Ausführliche Primärbelege stehen in **research-powers.md**, **research-route.md**, **research-egg.md**, **research-cemetery.md** und **research-secrets.md**. Die Spielinstallation wurde nur gelesen.
+Die Regeln wurden gegen die lokal installierte PC-Fassung **0.0.958 / Steam-Build 24843312** geprüft. Reise- und Build-Reihenfolge sind Empfehlungen; prozedurale Räume, Gold und dynamische Ladenpreise sind variabel. Ein vollständiger neuer Spieldurchlauf wurde nicht durchgeführt. Ausführliche Primärbelege stehen in **research-powers.md**, **research-route.md**, **research-egg.md**, **research-cemetery.md**, **research-secrets.md** und **research-equipment.md**. Die Spielinstallation wurde nur gelesen.
 
 ## Entwicklung
 
@@ -35,7 +35,7 @@ npm run dev
 npm run build
 ```
 
-Der Build erzeugt dist/index.html und kopiert die fertige Einzeldatei nach Moonring-Walkthrough.html. Die fünf Recherchedateien werden ebenfalls nach dist kopiert. Für eine lokale Vorschau des fertigen Exports:
+Der Build erzeugt dist/index.html und kopiert die fertige Einzeldatei nach Moonring-Walkthrough.html. Die sechs Recherchedateien werden ebenfalls nach dist kopiert. Für eine lokale Vorschau des fertigen Exports:
 
 ```bash
 python -m http.server 5173 --directory dist

@@ -286,6 +286,10 @@ The mint „Geheimnis“ tag links from the selected route stage to a ready ridd
 
 Travel instructions and supplies use the inset panel tone with modest padding and no shadow. Stage instructions and gift references remain open rows. The help disclosure has a thin outlined shell; story disclosures use a single top rule and native disclosure markers.
 
+### Ausrüstungsinventar
+
+Das Inventar folgt den Ausrüstungsslots. Einspaltige Zeilen ordnen die passende Auswahl pro Build vom Zielteil bis zum Einstieg; Werte und Empfehlung stehen direkt unter dem englischen Gegenstandsnamen. Weitere situative Teile bleiben je Slot in einem nativen Aufklappbereich mit sichtbarem Besitz-Zähler. Beim Buildwechsel schließen diese Bereiche. Besitzhäkchen teilen weiterhin den bestehenden pro-Build-Speicher und die JSON-Sicherung; die Kopfzeile zählt Besitz ohne Sammlungsziel.
+
 ### Inputs / Fields
 
 Notes use the panel ground, a thin rule border, control corners and the notes typography token. The textarea is vertically resizable with a 150px minimum height. Checklist boxes are outlined when open, filled with the active build accent when checked, and contain a drawn check mark; completed copy becomes muted. Native stage selection uses the register tone.

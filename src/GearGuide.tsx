@@ -7,7 +7,7 @@ export function GearGuide({build,checked,toggle}:{build:BuildId;checked:Record<s
  return <>
   <h2>Ein Teil nach dem anderen, sobald es passt.</h2>
   <p>Du beginnst mit <strong>Dagger, Cap, Cotton Tunic und Leggings</strong>. Diese vier Teile wiegen zusammen <strong>14</strong> bei <strong>40</strong> Kapazität mit END 0. Behalte sie, bis ein einzelner Austausch sinnvoll und bezahlbar ist.</p>
-  <InventoryChecklist checked={checked} toggle={toggle}/>
+  <InventoryChecklist build={build} checked={checked} toggle={toggle}/>
   <section class="supplies">
    <h3>Vor jedem Kauf: Versorgungsgold zurücklegen</h3>
    <p><strong>Unsere Empfehlung: mindestens {formattedGoldReserve} Gold nach jedem Ausrüstungskauf behalten.</strong> Fehlende Heilung, Nahrung und bei Fernwaffen passende Munition vorher besorgen; nur Gold oberhalb der Reserve für Ausrüstung ausgeben. Die Reserve darf für notwendigen Nachschub verwendet werden. Danach weitere Ausrüstung verschieben, bis sie wieder aufgefüllt ist.</p>
