@@ -132,8 +132,8 @@ const recommendations:Record<BuildId,Record<string,Recommendation[]>>={
    ['bright-pin','Magische Nahkampfreserve · INT 5 nach Revelation; gegen physisch immune Gegner erwägen. Ersetzt Sword im selben Slot.']
   ],
   ranged:[
-   ['shortbow','Leichte optionale Distanzhilfe · PER 5 nach Feast. Das Leder-Set mit 56 Last wird 66 bei END 15. Hurl kann den Kauf ersetzen.'],
-   ['crossbow','Alternative mit Bolts · STR 5. Normale Last 16: im Leder-Set bereits 72 von 72,14; Shortbow lässt mehr Reserve.']
+   ['shortbow','Optionale Jagd-/Distanzhilfe ab Feast / PER 5, Basis 1.000 + Arrows. Mit Sword + Startkleidung + Buckler 42 bei END 5. Das volle 56er-Lederset wird 66 bei END 15.'],
+   ['crossbow','Frühe Jagdhilfe ab Slam / STR 5, Basis 1.000 in Wintersholl/Hauptstadt + Bolts. Mit Shortsword + Startkleidung ohne Buckler 36 / 40. Volles Leder-Set: 72 / 72,14 bei END 15.']
   ],
   head:[
    ['horned-helmet','Spätes Nahkampfziel · +20% phys. Nahkampfschaden und phys. Schutz. Leather Helmet → Horned: Leder-Set 56 → 64 bei END 15; mit Shortbow 74 und zu schwer. Basis 3.000, Wintersholl.'],
