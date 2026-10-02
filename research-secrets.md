@@ -36,6 +36,12 @@ Four Lake Meet wird durch das beschädigte Kartenbuch in Barrow-Linn markiert (`
 
 **Lösung:** `Death Has Dominion Over All`. `HarrowdusTriggers.csv:11` enthält `yell,Death_Has_Dominion_Over_All,fnYellUnlock` bei 79,82 mit Radius 1. `state_game.lua:22063–22125` ersetzt Leerzeichen durch Unterstriche und entsperrt bei erfolgreicher Phrase den Zugang. Groß-/Kleinschreibung ist irrelevant. Die Boss-Hilfe bleibt im Reiseplan separat eingeklappt; sie enthält keine ungesperrte Zugangslösung mehr.
 
+## Hearthaven: unsichtbare Wände und Bücher
+
+Spielerfund vom 3. Oktober 2026: Hinter einer unsichtbaren / falschen Wand in Hearthaven folgen mehrere weitere unsichtbare Wände und Räume mit zahlreichen Büchern und Lore. In Etappe 04 wird bei beiden Builds ausdrücklich auf die weitere Suche nach Durchgängen und das Lesen der Bücher hingewiesen. Der neue Checklistenpunkt hat die eigene ID `hearth-hidden-library`; bestehende Aufgaben-IDs bleiben erhalten.
+
+Die Büchersammlung ist in den lokalen Spieldaten belegt: `data/save/HearthavenTriggers.csv` enthält vier reguläre Buchtrigger (`hearthaven_book_1` bis `_4`) und 16 weitere (`hearthaven_book_locked_1` bis `_16`). Ihre Texte stehen in `data/strings.lua:138–159`, unter anderem zu Calderas Geschichte, den Göttern, Amber und Ancient Sibaroon. Die Abfolge der unsichtbaren Wände stammt aus dem Spielerfund; ein genauer Einstieg und eine vollständige Raumroute wurden hier nicht unabhängig geprüft.
+
 ## Umsetzung und Grenzen
 
 - Eigene Hinweis-IDs in den vorhandenen buildbezogenen Häkchen speichern; bestehende Fortschritts- und Etappen-IDs bleiben erhalten.
