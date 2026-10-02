@@ -37,6 +37,8 @@ Die Chivo-Schrift stammt aus dem Google-Fonts-Repository und wird unter der SIL 
 
 Die Seite läuft als Cloudflare Worker mit Static Assets. Native **Workers Builds** ist direkt mit diesem GitHub-Repository verbunden: Jeder Push auf `main`, auch ein gemergter Pull Request, baut und veröffentlicht automatisch. Andere Branches werden nicht veröffentlicht. Es ist kein GitHub-Actions-Workflow und kein Geheimnis im Repository erforderlich.
 
+Voraussetzung für den automatischen Push-Auslöser: Die GitHub-App **Cloudflare Workers and Pages** muss Zugriff auf `ReynkeDeVos/Moonring-Guide` haben. Bei „Only select repositories“ das Repository in den [GitHub-App-Einstellungen](https://github.com/settings/installations) ergänzen und bestehende Freigaben beibehalten. Eine erfolgreiche manuelle Veröffentlichung allein prüft diesen Auslöser nicht.
+
 Cloudflare führt `npm run build:cloudflare` und danach `npm run deploy:cloudflare` aus. Der normale Offline-Build bleibt `npm run build`; die gesonderte Vite-Konfiguration übernimmt anschließend HTML, Offline-Download und Recherchedateien für das Hosting. Die Anmeldung und Repository-Verbindung liegen bei Cloudflare.
 
 Für eine manuelle Veröffentlichung mit einem autorisierten Cloudflare-Konto:
