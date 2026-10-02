@@ -11,13 +11,19 @@ Lade das Repository über **Code → Download ZIP** herunter und entpacke es, od
 
 **DX / The Egg ist enthalten:** Etappe 16 folgt nach den fünf Relikten und vor beiden Schlussrouten. Zugang per Schiff, Vorbereitung pro Build, 100 Etagen zum Abhaken, Speichern/Tod und eingeklappte Boss-/Preishilfe. Die Etagen 1–99 sind prozedural: Der Guide gibt eine Routine und belegte Muster vor. „Neuen Egg-Versuch beginnen“ setzt nur diesen Lauf zurück.
 
+**Geheimnisse:** Der eigene Reiter sammelt die Hinweise zum Friedhofsherz („My heart hides behind a word made by walls“) und zur Jest-Zugangsphrase. An den passenden Reiseetappen stehen konkrete Fundanleitungen mit eigenen Hinweis-Häkchen. Erst wenn alle benötigten Hinweise ausdrücklich bestätigt sind, werden Geheimnis-Link und aufklappbare Lösung freigegeben. Ein erledigter Stadtbesuch genügt dafür nicht. Die Sammlung ist kein vollständiges Verzeichnis aller Spielgeheimnisse.
+
 Beide Builds beginnen neutral ohne Eid. Reiseplan, genaue Kräfte-Kaufreihenfolge und Ausrüstung wechseln mit dem Build. Story-Enden und Rätselhilfen sind zunächst eingeklappt. Markierungen und Notizen werden pro Build im Browser gespeichert; unter „Quellen & Speicher“ kannst du sie als JSON sichern und übertragen. Browser können für Datei und Server getrennte Speicher verwenden.
 
 Die Ausrüstungsliste beginnt bei Dagger, Cap, Cotton Tunic und Leggings. Jeder Einkaufs-Schritt zeigt Preis, Stat-Anforderung, Gewichtsänderung und eine Möglichkeit zum Behalten oder Überspringen. Versorgung zuerst bezahlen und nur einzelne Teile austauschen; Zwischenstufen und vollständige Sets sind keine Kaufpflicht. Gewicht, Dodge, Stealth und die Vergleichsvorschau werden separat erklärt.
 
+**Inventar:** Startteile, Waffen, Rüstung, Schilde, Amulette und die optionalen legendären Fundstücke lassen sich unter „Ausrüstung“ einzeln als vorhanden markieren und wieder abwählen. Die Sammlung wird pro Build gespeichert, gesichert, geladen und mit dem Build zurückgesetzt. Besitzhäkchen beeinflussen weder Reiseetappen noch Gaben und berechnen keine ausgerüstete Last.
+
+**Goldreserve:** Auf jeder Guide-Ansicht steht gut sichtbar die Empfehlung, nach Ausrüstungskäufen mindestens **1.000 Gold** für Versorgung übrig zu lassen. Die Ausrüstungsseite erklärt den Nachschubpuffer mit Basispreisen und Kaufbeispielen. Am Spielstart wird die Reserve erst aufgebaut; für lange Expeditionen zusätzliche Vorräte besorgen.
+
 Bei einem Wechsel der Webadresse oder des Offline-Dateipfads die JSON-Sicherung unter „Quellen & Speicher“ laden. Bereits gespeicherter Fortschritt am selben Browser-Ursprung wird auch aus dem bisherigen Speicherschlüssel übernommen.
 
-Die Regeln wurden gegen die lokal installierte PC-Fassung **0.0.958 / Steam-Build 24843312** geprüft. Reise- und Build-Reihenfolge sind Empfehlungen; prozedurale Räume, Gold und dynamische Ladenpreise sind variabel. Ein vollständiger neuer Spieldurchlauf wurde nicht durchgeführt. Ausführliche Primärbelege stehen in **research-powers.md**, **research-route.md**, **research-egg.md** und **research-cemetery.md**. Die Spielinstallation wurde nur gelesen.
+Die Regeln wurden gegen die lokal installierte PC-Fassung **0.0.958 / Steam-Build 24843312** geprüft. Reise- und Build-Reihenfolge sind Empfehlungen; prozedurale Räume, Gold und dynamische Ladenpreise sind variabel. Ein vollständiger neuer Spieldurchlauf wurde nicht durchgeführt. Ausführliche Primärbelege stehen in **research-powers.md**, **research-route.md**, **research-egg.md**, **research-cemetery.md** und **research-secrets.md**. Die Spielinstallation wurde nur gelesen.
 
 ## Entwicklung
 
@@ -29,7 +35,7 @@ npm run dev
 npm run build
 ```
 
-Der Build erzeugt dist/index.html und kopiert die fertige Einzeldatei nach Moonring-Walkthrough.html. Die vier Recherchedateien werden ebenfalls nach dist kopiert. Für eine lokale Vorschau des fertigen Exports:
+Der Build erzeugt dist/index.html und kopiert die fertige Einzeldatei nach Moonring-Walkthrough.html. Die fünf Recherchedateien werden ebenfalls nach dist kopiert. Für eine lokale Vorschau des fertigen Exports:
 
 ```bash
 python -m http.server 5173 --directory dist
