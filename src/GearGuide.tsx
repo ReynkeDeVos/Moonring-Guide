@@ -1,14 +1,19 @@
 import { equipment, shoppingSteps } from './data';
 import type { BuildId } from './data';
+import { InventoryChecklist } from './InventoryChecklist';
+import { formattedGoldReserve } from './GoldReserve';
 
-export function GearGuide({build}:{build:BuildId}) {
+export function GearGuide({build,checked,toggle}:{build:BuildId;checked:Record<string,boolean>;toggle:(id:string)=>void}) {
  return <>
   <h2>Ein Teil nach dem anderen, sobald es passt.</h2>
   <p>Du beginnst mit <strong>Dagger, Cap, Cotton Tunic und Leggings</strong>. Diese vier Teile wiegen zusammen <strong>14</strong> bei <strong>40</strong> Kapazität mit END 0. Behalte sie, bis ein einzelner Austausch sinnvoll und bezahlbar ist.</p>
+  <InventoryChecklist checked={checked} toggle={toggle}/>
   <section class="supplies">
    <h3>Vor jedem Kauf: Versorgungsgold zurücklegen</h3>
-   <p>Heilung, Nahrung und bei Fernwaffen passende Munition zuerst einplanen. Nur das übrige Gold ist dein Ausrüstungsbudget. Ein neues Teil kaufen, dann neu vergleichen; du musst die Liste nicht in einem Einkauf abarbeiten.</p>
-   <p>{build==='wolf'?'Beispiel mit Basispreisen: 1.500 Gold − 400 für zwei fehlende Heiltränke = 1.100. Wenn Nahrung und Munition schon reichen und STR 5 erreicht ist, passen Shortsword (1.000) und Buckler (100); Gloves oder Leder müssen warten.':'Beispiel mit Basispreisen: 1.500 Gold − 400 für zwei fehlende Heiltränke − 200 für 20 Pfeile = 900. Das reicht noch nicht für Shortbow (1.000): mit vorhandener Ausrüstung weitergehen, statt die Versorgung für den Bogen auszugeben.'} Fehlt weitere Versorgung, bleibt entsprechend weniger übrig.</p>
+   <p><strong>Unsere Empfehlung: mindestens {formattedGoldReserve} Gold nach jedem Ausrüstungskauf behalten.</strong> Fehlende Heilung, Nahrung und bei Fernwaffen passende Munition vorher besorgen; nur Gold oberhalb der Reserve für Ausrüstung ausgeben. Die Reserve darf für notwendigen Nachschub verwendet werden. Danach weitere Ausrüstung verschieben, bis sie wieder aufgefüllt ist.</p>
+   <p>Warum 1.000? Mit Basispreisen kosten zwei Potion of Healing 400, ein Sera-leaf Oil 200 und ein Water 100. Es bleiben 300 für Nahrung und Preisabweichungen; bei einem Bogen kosten 20 Pfeile weitere 200, dann bleiben 100. Das ist ein kleiner Nachschubpuffer, keine Garantie für einen ganzen Dungeon. Tatsächliche Ladenpreise prüfen und für lange Reliktdungeons, The Egg und The Lament mehr Heilung, Energie, Nahrung, Statusmittel und Munition vorher mitnehmen.</p>
+   <p>{build==='wolf'?'Beispiel: Bei 1.500 Gold und bereits aufgefüllten Vorräten bleiben nach 1.000 Reserve noch 500 für Ausrüstung. Buckler (Basis 100) passt; Shortsword (1.000) wartet bis mindestens 2.000 Gesamtgold. Für Sword (2.000) brauchst du mindestens 3.000.':'Beispiel: Bei 1.500 Gold und bereits aufgefüllten Vorräten bleiben nach 1.000 Reserve noch 500 für Ausrüstung. Shortbow (Basis 1.000) wartet bis mindestens 2.000 Gesamtgold; Longbow (5.000) bis mindestens 6.000. Fehlende Pfeile und Heilung vorher bezahlen.'} Fehlt weitere Versorgung oder liegt der Ladenpreis höher, brauchst du entsprechend mehr Gold.</p>
+   <p class="small-note">Du startest mit 100 Gold und musst die ersten Schritte nicht bis 1.000 verschieben. Anfangs vorhandene Ausrüstung behalten und notwendige Heilung bezahlen; die Reserve beim Verdienen aufbauen. Ein neues Teil kaufen, dann neu vergleichen.</p>
    <ul>
     <li><strong>Potion of Healing</strong> · Basis 200. Hauptstadt, Wintersholl, Hearthaven, Harrowdus, Red Grove. Barrow-Linn hat keinen Apothecary.</li>
     <li><strong>Arrows / Bolts</strong> · Basis 10 pro Stück. Nur für die tatsächlich benutzte Fernwaffe kaufen.</li>

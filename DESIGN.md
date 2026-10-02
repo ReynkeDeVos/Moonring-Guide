@@ -280,6 +280,8 @@ Two adjacent choices share one outlined, rounded enclosure. A selected choice re
 
 God tags are compact text labels with paired muted grounds, the tag typography token and small corners. They communicate affiliation, not an interactive filter state.
 
+The mint „Geheimnis“ tag links from the selected route stage to a ready riddle. It only appears when every clue has been explicitly confirmed. Secret sections use open rows, the existing line token, source disclosures and independent checkboxes. The clue count stays beside the heading; optional clue checks never count toward route completion. Each stage gives the local acquisition instructions, including an explicit empty state when no new clue is available. The Geheimnisse reference retains the selected stage and links back to clue locations. Solutions render only after all confirmations and remain behind a native disclosure; removing any confirmation hides them immediately.
+
 ### Cards / Containers
 
 Travel instructions and supplies use the inset panel tone with modest padding and no shadow. Stage instructions and gift references remain open rows. The help disclosure has a thin outlined shell; story disclosures use a single top rule and native disclosure markers.
