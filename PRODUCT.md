@@ -15,7 +15,7 @@ A German-speaking Moonring beginner on their first playthrough, reading alongsid
 Make two strong, forgiving builds actionable through exact ordered god gifts, linked travel and quest milestones, and sensible equipment purchases.
 
 ## Operating Context
-Offline artifact in Documents/Moonring-Guide plus a public GitHub repository and a Cloudflare-hosted page. The user follows the next step, checks completed actions, and can read ahead. Complete base-game progression and DX / The Egg before the ending, with story and boss spoilers initially collapsed.
+Offline artifact in Documents/Moonring-Walkthrough plus a public GitHub repository and a Cloudflare-hosted page. The user follows the next step, checks completed actions, and can read ahead. Complete base-game progression and DX / The Egg before the ending, with story and boss spoilers initially collapsed.
 
 ## Capabilities and Constraints
 Two switchable builds with pros and cons; exact gift purchase order; route and quest prerequisites; equipment choices tied to progression. German explanations and exact English in-game names. Persistent local progress. Research based on installed primary game data and online official sources. Unknown or procedural details must be identified. Cloudflare Workers Static Assets with native Workers Builds deploys every push/merge to main. The offline single-file artifact remains supported; browser progress stays local.

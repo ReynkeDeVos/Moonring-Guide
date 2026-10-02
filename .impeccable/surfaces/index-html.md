@@ -5,7 +5,7 @@ primary_target: "index.html"
 related_targets: ["src/App.tsx","src/styles.css"]
 ---
 
-# Moonring guide
+# Moonring walkthrough
 
 Mode: Read, with checklist operation. Target index.html, related src/App.tsx and src/styles.css.
 Audience task: follow a researched first-playthrough route alongside Moonring. Two switchable builds; exact gift order, quests and gear. Whole game plus the owned DX / The Egg, inserted as stage 16 before both endings, with story and boss details concealed by default.

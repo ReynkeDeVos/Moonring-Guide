@@ -6,7 +6,9 @@ import type { BuildId, Gift, Stage } from './data';
 
 type View = 'route' | 'gifts' | 'gear' | 'basics' | 'sources';
 interface Save { version:1; build:BuildId; checked:Record<BuildId,Record<string,boolean>>; stage:Record<BuildId,string>; notes:Record<BuildId,string> }
-const KEY='moonring-guide-v1';
+const KEY='moonring-walkthrough-v1';
+// Read existing progress when upgrading an installation on the same origin.
+const LEGACY_KEY='moonring-guide-v1';
 const empty=():Save=>({version:1,build:'wolf',checked:{wolf:{},lady:{}},stage:{wolf:'yarrow',lady:'yarrow'},notes:{wolf:'',lady:''}});
 const validKeys=(b:BuildId)=>new Set([...getStages(b).flatMap(s=>s.tasks.map(t=>t.id)),...eggFloorIds,...gifts[b].map(g=>`gift-${g.id}`),...finale.map((_,i)=>`finale-${i}`)]);
 function parseSave(raw:string):Save {
@@ -22,7 +24,7 @@ function parseSave(raw:string):Save {
  return result;
 }
 function readInitial(){
- try {const raw=localStorage.getItem(KEY); return {data:raw?parseSave(raw):empty(),error:''};}
+ try {const raw=localStorage.getItem(KEY)??localStorage.getItem(LEGACY_KEY); return {data:raw?parseSave(raw):empty(),error:''};}
  catch {return {data:empty(),error:'Der gespeicherte Fortschritt konnte nicht gelesen werden. Du kannst eine Sicherung unter Quellen & Speicher laden.'};}
 }
 const initial=readInitial();
@@ -94,7 +96,7 @@ export function App(){
   <p class="sidebar-foot">Für deine PC-Version 0.0.958<br/>Recherche vom 2. Oktober 2026</p>
  </aside>
  <main id="content-start" tabIndex={-1}>
-  <header class="intro"><div><h1>Moonring, Schritt für Schritt.</h1><p>Zwei starke Builds für deinen ersten Durchlauf, inklusive DX / The Egg.<br class="wide-only"/> Wähle einen Weg – und behalte den nächsten Schritt im Blick.</p></div><div class="version-label">Moonring<br/><span>Beginner-Guide + DX</span></div></header>
+  <header class="intro"><div><h1>Moonring, Schritt für Schritt.</h1><p>Zwei starke Builds für deinen ersten Durchlauf, inklusive DX / The Egg.<br class="wide-only"/> Wähle einen Weg – und behalte den nächsten Schritt im Blick.</p></div><div class="version-label">Moonring<br/><span>Walkthrough + DX</span></div></header>
   <div class="build-picker" role="group" aria-label="Build wählen">{(['wolf','lady'] as const).map(b=><button class={build===b?'active':''} aria-pressed={build===b} onClick={()=>setBuild(b)} key={b}><Icon name={b==='wolf'?'shield':'bow'} size={27}/><span><strong>{builds[b].name}</strong><small>{builds[b].subtitle}</small></span>{b==='wolf'?<span class="recommendation">Empfehlung</span>:null}{build===b && <span class="chosen"><Icon name="check" size={18}/><span class="sr-only">Ausgewählt</span></span>}</button>)}</div>
   <details class="build-overview"><summary>Passt {info.name} zu mir? <span>Vorteile, Grenzen & Kampfablauf</span></summary><div class="overview-body"><p>{info.description}</p><div class="tradeoffs"><section><h3>Das macht ihn angenehm</h3><ul>{info.pros.map(p=><li key={p}>{p}</li>)}</ul></section><section><h3>Darauf achtest du</h3><ul>{info.cons.map(p=><li key={p}>{p}</li>)}</ul></section></div><h3>Deine einfache Kampfroutine</h3><ol>{info.loop.map(p=><li key={p}>{p}</li>)}</ol><p class="stat-line">Grundattribute nach der Liste: {info.stats}</p></div></details>
   <nav class="view-nav" aria-label="Guide-Ansicht">{tabs.map(t=><button key={t.id} aria-current={view===t.id?'page':undefined} class={view===t.id?'active':''} onClick={()=>{setView(t.id);setResetArmed(false)}}>{t.name}</button>)}</nav>

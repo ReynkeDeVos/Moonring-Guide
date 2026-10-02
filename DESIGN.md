@@ -1,5 +1,5 @@
 ---
-name: Moonring Guide
+name: Moonring Walkthrough
 description: 'Night Atlas: a calm companion for a first Moonring playthrough.'
 colors:
   ground: '#171622'
@@ -184,7 +184,7 @@ components:
     padding: 3px 7px
 ---
 
-# Design System: Moonring Guide
+# Design System: Moonring Walkthrough
 
 ## Overview
 
