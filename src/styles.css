@@ -40,6 +40,36 @@ main{margin-left:256px;max-width:1350px;padding:46px clamp(28px,4.3vw,68px) 24px
 .egg-guide{border-top:1px solid var(--line);margin-top:26px;padding-top:2px}.egg-guide>p,.egg-guide li{font-size:.88rem}.egg-guide .help-details ol{font-size:.87rem}.egg-tracker{margin:32px 0;border-top:1px solid var(--line);padding-top:20px}.egg-tracker-heading{display:flex;align-items:baseline;justify-content:space-between;gap:15px;margin-bottom:10px}.egg-tracker-heading h3{margin:0}.egg-tracker-heading>span{font-size:.75rem;color:var(--accent);font-variant-numeric:tabular-nums;white-space:nowrap}.egg-band-picker{display:flex;align-items:center;gap:15px;flex-wrap:wrap;margin:20px 0 14px}.egg-band-picker label{font-size:.8rem;color:var(--muted)}.egg-band-picker select{background:var(--rail);color:var(--text);border:1px solid var(--line);border-radius:5px;padding:10px 14px;font-size:.84rem;min-width:125px}.egg-band-tip{font-size:.85rem;margin-bottom:12px}.egg-floors{display:grid;grid-template-columns:1fr 1fr;gap:0 25px;margin-top:15px}.egg-floors .check-row{border-bottom:1px solid var(--line);min-height:65px;font-size:.83rem}.egg-floors strong{font-weight:500;font-variant-numeric:tabular-nums;display:block}.egg-floors small{display:block;color:var(--muted);font-size:.7rem;line-height:1.6;margin-top:3px}.egg-boss{margin-top:30px}.egg-boss p{font-size:.87rem}.egg-boss h3{margin-top:20px}@media(max-width:540px){.egg-floors{grid-template-columns:1fr}.egg-band-picker{gap:10px}.egg-band-picker .text-button{flex-basis:100%}.egg-tracker-heading h3{font-size:1.02rem}}
 
 .stage-secrets{border-top:1px solid var(--line);margin-top:24px;padding-top:20px}
+.stage-dungeons{border-top:1px solid var(--line);margin:24px 0;padding-top:20px}
+.stage-dungeons>h3{margin:0 0 8px;font-size:1.04rem;color:var(--lavender)}
+.stage-dungeons h4{font-size:.94rem;margin:22px 0 8px}
+.dungeon-hint{padding:4px 0 12px;border-bottom:1px solid var(--line)}
+.dungeon-hint .check-row{align-items:flex-start;padding-bottom:6px}
+.dungeon-hint strong{display:block;font-weight:500;font-size:.9rem}
+.dungeon-hint>.text-button,.dungeon-hint>.source{margin-left:32px}
+.dungeon-hint>.source{margin-top:5px}
+.dungeon-hint input:disabled{cursor:not-allowed;opacity:.6}
+.dungeon-filter{display:flex;align-items:center;gap:12px 18px;flex-wrap:wrap;margin:24px 0 32px;font-size:.83rem}
+.dungeon-filter select{background:var(--rail);color:var(--text);border:1px solid var(--line);border-radius:5px;padding:11px 13px;max-width:100%;font-size:inherit}
+.dungeon-filter>span{color:var(--muted);font-variant-numeric:tabular-nums}
+.dungeon-group{margin:34px 0}
+.dungeon-group>h3{font-size:1.25rem;margin:0 0 16px}
+.dungeon-entry,.dungeon-visit{border-top:1px solid var(--line);scroll-margin-top:24px}
+.dungeon-entry>summary,.dungeon-visit>summary{padding:16px 0;line-height:1.6;font-size:.98rem}
+.dungeon-status{display:block;font-size:.76rem;color:var(--muted);margin:4px 0 0 17px;font-variant-numeric:tabular-nums}
+.dungeon-details{padding:3px 0 20px}
+.dungeon-details p{font-size:.88rem;max-width:74ch}
+.dungeon-facts{font-size:.86rem;margin:18px 0 22px;max-width:74ch}
+.dungeon-facts>div{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;margin:11px 0}
+.dungeon-facts dt{color:var(--muted)}
+.dungeon-facts dd{margin:0;line-height:1.65}
+.dungeon-locked{color:var(--muted);font-size:.86rem;line-height:1.65;padding:13px 0;max-width:74ch}
+.dungeon-entry>h4{font-size:.96rem;margin:12px 0}
+.dungeon-exploration{margin:18px 0;border-top:1px solid var(--line)}
+.dungeon-exploration>summary{padding:14px 0;color:var(--lavender);font-size:.85rem;line-height:1.65}
+.dungeon-entry .dungeon-hint:last-child{padding-bottom:24px;border-bottom:0}
+.dungeon-details .check-row input:disabled{opacity:.6;cursor:not-allowed}
+@media(max-width:540px){.dungeon-filter{gap:10px}.dungeon-filter>span{flex-basis:100%}.dungeon-facts>div{grid-template-columns:72px minmax(0,1fr);gap:12px}.dungeon-entry>summary,.dungeon-visit>summary{font-size:.91rem}.dungeon-status{font-size:.73rem}.dungeon-hint strong{font-size:.86rem}}
 .stage-secrets>h3{margin:0 0 8px;font-size:1.04rem;color:var(--lavender)}
 .stage-secrets>.small-note{margin-bottom:18px}
 .stage-secret+.stage-secret{border-top:1px solid var(--line);margin-top:20px;padding-top:20px}
