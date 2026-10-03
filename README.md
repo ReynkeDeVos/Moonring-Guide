@@ -11,6 +11,8 @@ Lade das Repository über **Code → Download ZIP** herunter und entpacke es, od
 
 **DX / The Egg ist enthalten:** Etappe 16 folgt nach den fünf Relikten und vor beiden Schlussrouten. Zugang per Schiff, Vorbereitung pro Build, 100 Etagen zum Abhaken, Speichern/Tod und eingeklappte Boss-/Preishilfe. Die Etagen 1–99 sind prozedural: Der Guide gibt eine Routine und belegte Muster vor. „Neuen Egg-Versuch beginnen“ setzt nur diesen Lauf zurück.
 
+**Dungeons:** 56 benannte Dungeons und verwandte Prüfungs-/Fundorte sind mit Lage, Umfang, Bossgefahr, Zugang, Rückzug und einer Schwierigkeitseinschätzung erfasst. Die Stadtetappen enthalten eigene Häkchen für tatsächlich erhaltene Gesprächshinweise und gelesene Karten; selbst entdeckte Eingänge lassen sich getrennt bestätigen. Erst danach erscheinen Wege und Abschlusshäkchen. Schlüssel, Schiff und vollständige Jest-Hinweise werden gesondert geprüft. Die Tower-Schlüsselspur hat Bestätigungen pro Stadt. Optionale Besuche stehen bei den passenden späteren Etappen und zählen nicht zum Etappenabschluss. Die Übersicht lässt sich nach bekannten und noch unbekannten Fundorten filtern. Bereits gespeicherte Abschlüsse bleiben erhalten und bestätigen keinen Fundorthinweis automatisch.
+
 **Geheimnisse:** Der eigene Reiter sammelt die Hinweise zum Friedhofsherz („My heart hides behind a word made by walls“) und zur Jest-Zugangsphrase. An den passenden Reiseetappen stehen konkrete Fundanleitungen mit eigenen Hinweis-Häkchen. Erst wenn alle benötigten Hinweise ausdrücklich bestätigt sind, werden Geheimnis-Link und aufklappbare Lösung freigegeben. Ein erledigter Stadtbesuch genügt dafür nicht. Die Sammlung ist kein vollständiges Verzeichnis aller Spielgeheimnisse.
 
 Beide Builds beginnen neutral ohne Eid. Reiseplan, genaue Kräfte-Kaufreihenfolge und Ausrüstung wechseln mit dem Build. Story-Enden und Rätselhilfen sind zunächst eingeklappt. Markierungen und Notizen werden pro Build im Browser gespeichert; unter „Quellen & Speicher“ kannst du sie als JSON sichern und übertragen. Browser können für Datei und Server getrennte Speicher verwenden.
@@ -27,7 +29,7 @@ Die Ausrüstungsliste beginnt bei Dagger, Cap, Cotton Tunic und Leggings. Jeder 
 
 Bei einem Wechsel der Webadresse oder des Offline-Dateipfads die JSON-Sicherung unter „Quellen & Speicher“ laden. Bereits gespeicherter Fortschritt am selben Browser-Ursprung wird auch aus dem bisherigen Speicherschlüssel übernommen.
 
-Die Regeln wurden gegen die lokal installierte PC-Fassung **0.0.958 / Steam-Build 24843312** geprüft. Reise- und Build-Reihenfolge sind Empfehlungen; prozedurale Räume, Gold und dynamische Ladenpreise sind variabel. Ein vollständiger neuer Spieldurchlauf wurde nicht durchgeführt. Ausführliche Primärbelege stehen in **research-powers.md**, **research-route.md**, **research-egg.md**, **research-cemetery.md**, **research-secrets.md** und **research-equipment.md**. Die Spielinstallation wurde nur gelesen.
+Die Regeln wurden gegen die lokal installierte PC-Fassung **0.0.958 / Steam-Build 24843312** geprüft. Reise- und Build-Reihenfolge sind Empfehlungen; prozedurale Räume, Gold und dynamische Ladenpreise sind variabel. Ein vollständiger neuer Spieldurchlauf wurde nicht durchgeführt. Ausführliche Primärbelege stehen in **research-powers.md**, **research-route.md**, **research-egg.md**, **research-cemetery.md**, **research-secrets.md**, **research-equipment.md** und **research-dungeons.md**. Die Spielinstallation wurde nur gelesen.
 
 ## Entwicklung
 
@@ -37,9 +39,10 @@ Preact 11, TypeScript und Vite.
 npm ci
 npm run dev
 npm run build
+node --test scripts/dungeons.test.mjs
 ```
 
-Der Build erzeugt dist/index.html und kopiert die fertige Einzeldatei nach Moonring-Walkthrough.html. Die sechs Recherchedateien werden ebenfalls nach dist kopiert. Für eine lokale Vorschau des fertigen Exports:
+Der Build erzeugt dist/index.html und kopiert die fertige Einzeldatei nach Moonring-Walkthrough.html. Die sieben Recherchedateien werden ebenfalls nach dist kopiert. Für eine lokale Vorschau des fertigen Exports:
 
 ```bash
 python -m http.server 5173 --directory dist
